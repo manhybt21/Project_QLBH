@@ -1,0 +1,11 @@
+D:\dự án mẫu\BUS\bin\Debug\BUS.dll
+D:\dự án mẫu\BUS\bin\Debug\BUS.pdb
+D:\dự án mẫu\BUS\bin\Debug\DAL.dll
+D:\dự án mẫu\BUS\bin\Debug\DTO.dll
+D:\dự án mẫu\BUS\bin\Debug\DAL.pdb
+D:\dự án mẫu\BUS\bin\Debug\DTO.pdb
+D:\dự án mẫu\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+D:\dự án mẫu\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\dự án mẫu\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\dự án mẫu\BUS\obj\Debug\BUS.dll
+D:\dự án mẫu\BUS\obj\Debug\BUS.pdb

@@ -1,0 +1,6 @@
+D:\dự án mẫu\DTO\bin\Release\DTO.dll
+D:\dự án mẫu\DTO\bin\Release\DTO.pdb
+D:\dự án mẫu\DTO\obj\Release\DTO.csproj.CoreCompileInputs.cache
+D:\dự án mẫu\DTO\obj\Release\DTO.dll
+D:\dự án mẫu\DTO\obj\Release\DTO.pdb
+D:\dự án mẫu\DTO\obj\Release\DTO.csprojAssemblyReference.cache

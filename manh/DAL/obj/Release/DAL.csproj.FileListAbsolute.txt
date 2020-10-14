@@ -1,0 +1,9 @@
+D:\dự án mẫu\DAL\bin\Release\DAL.dll
+D:\dự án mẫu\DAL\bin\Release\DAL.pdb
+D:\dự án mẫu\DAL\bin\Release\DTO.dll
+D:\dự án mẫu\DAL\bin\Release\DTO.pdb
+D:\dự án mẫu\DAL\obj\Release\DAL.csprojAssemblyReference.cache
+D:\dự án mẫu\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+D:\dự án mẫu\DAL\obj\Release\DAL.csproj.CopyComplete
+D:\dự án mẫu\DAL\obj\Release\DAL.dll
+D:\dự án mẫu\DAL\obj\Release\DAL.pdb
