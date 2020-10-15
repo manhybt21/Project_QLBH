@@ -48,10 +48,10 @@ namespace DuAnMau
         {
             try
             {
-                SmtpClient client = new SmtpClient("manhldph10164@fpt.edu.vn", 25);
+                SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
                 NetworkCredential cred = new NetworkCredential("sender@gmail.com", "chonduoi");
                 MailMessage Msg = new MailMessage();
-                Msg.From = new MailAddress("sender@gmail.com");
+                Msg.From = new MailAddress("manhldph10164@fpt.edu.vn");
                 Msg.To.Add(email);
                 Msg.Subject = "bạn đã sử dụng chức năng quên mật khẩu";
                 Msg.Body = "mật khẩu mới là " + matKhau;
