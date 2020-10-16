@@ -92,7 +92,7 @@ namespace DuAnMau
                 kháchHàngToolStripMenuItem1.Enabled = true;
                 nhânViênToolStripMenuItem1.Enabled = true;
                 thốngKêToolStripMenuItem.Enabled = true;
-                if (int.Parse(dn.vaitro) == 1)
+                if (int.Parse(dn.vaitro) == 0)
                 {
                     VaiTroNV();
                 }
@@ -176,23 +176,10 @@ namespace DuAnMau
             }
         }
 
-        private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void hệThốngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void sảnPhẩmToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            sp = new frm_SanPham();
             if (!CheckExitsFrom("frm_SanPham"))
             {
                 sp.MdiParent = this;
@@ -206,6 +193,7 @@ namespace DuAnMau
 
         private void nhânViênToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            nv = new frm_NhanVien();
             if (!CheckExitsFrom("frm_NhanVien"))
             {
                 nv.MdiParent = this;
@@ -219,6 +207,7 @@ namespace DuAnMau
 
         private void kháchHàngToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            kh = new frm_KhachHang();
             if (!CheckExitsFrom("frm_KhachHang"))
             {
                 kh.MdiParent = this;

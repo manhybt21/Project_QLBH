@@ -23,21 +23,39 @@ namespace DuAnMau
         BUS_NHANVIEN bus_NHANVIEN = new BUS_NHANVIEN();
         public string vaitro { get; set; }// đăng nhập thành công kiểm tra vai trò
         public string matKhau { get; set; }
-        public void sendMail(string email, string matKhau)
+        public string RandomString(int size, bool lowerCase)
+        {
+            StringBuilder builder = new StringBuilder();
+            System.Random random = new Random();
+            char ch;
+            for (int i = 0; i < size; i++)
+            {
+                ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
+                builder.Append(ch);
+            }
+            if (lowerCase) return builder.ToString().ToLower();
+            return builder.ToString();
+        }
+        public int RandomNumber(int min, int max)
+        {
+            Random random = new Random();
+            return random.Next(min, max);
+        }
+        public void SendMail(string email, string matKhau)
         {
             try
             {
-                SmtpClient client = new SmtpClient("manhldph10164@fpt.edu.vn", 25);
-                NetworkCredential cred = new NetworkCredential("sender@gmail.com", "chonduoi");
+                SmtpClient client = new SmtpClient("smtp.gmail.com",587);//mail hệ thống
+                NetworkCredential cred = new NetworkCredential("manhluong284@gmail.com", "manhyb112");
                 MailMessage Msg = new MailMessage();
-                Msg.From = new MailAddress("sender@gmail.com");
+                Msg.From = new MailAddress("manhluong284@gmail.com");
                 Msg.To.Add(email);
                 Msg.Subject = "bạn đã sử dụng chức năng quên mật khẩu";
-                Msg.Body = "mật khẩu mới là " + matKhau;
+                Msg.Body = "Chào Anh/Chị Mật Khẩu Mới Là " +matKhau+ " Mời Anh/Chị Đăng Nhập Lại" ;
                 client.Credentials = cred;
                 client.EnableSsl = true;
                 client.Send(Msg);
-                MessageBox.Show("mật khẩu mới đã được gửi vui lòng kiểm tra email");
+                MessageBox.Show("Mật khẩu mới đã được gửi vui lòng kiểm tra email");
 
             }
             catch (Exception x)
@@ -54,13 +72,12 @@ namespace DuAnMau
             if (BUS_NHANVIEN.DangNhap(nv))
             {
                 string mail = nv.Email;
-                cache.mail = nv.Email;// truyền mail đăng nhập cho Home
+                cache.mail = mail;// truyền mail đăng nhập cho Home
                 DataTable dt = BUS_NHANVIEN.LayVaiTroNV(nv.Email);
                 vaitro = dt.Rows[0][0].ToString();// lấy vai trò nhân viên
                 MessageBox.Show("Login Successfully");
                 cache.session = 1;// đăng nhập thành công
                 this.Close();
-                
             }
             else
             {
@@ -79,13 +96,13 @@ namespace DuAnMau
                 if (BUS_NHANVIEN.QuenMatKhau(txt_EmailDangNhap.Text))
                 {
                     StringBuilder builder = new StringBuilder();
-                    builder.Append(bus_NHANVIEN.RandomString(4, true));
-                    builder.Append(bus_NHANVIEN.RandomNumber(1000, 9990));
-                    builder.Append(bus_NHANVIEN.RandomString(2, false));
+                    builder.Append(RandomString(4, true));
+                    builder.Append(RandomNumber(1000, 9990));
+                    builder.Append(RandomString(2, false));
                     MessageBox.Show(builder.ToString());
                     string matkhaumoi = bus_NHANVIEN.encryption(builder.ToString());
                     BUS_NHANVIEN.TaoMatKhauMoi(txt_EmailDangNhap.Text, matkhaumoi);
-                    sendMail(txt_EmailDangNhap.Text, matkhaumoi);
+                    SendMail(txt_EmailDangNhap.Text, matkhaumoi);
                 }
                 else
                 {

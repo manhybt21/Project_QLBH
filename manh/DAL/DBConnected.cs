@@ -9,6 +9,6 @@ namespace DAL
 {
     public static class DBConnected
     {
-        internal static SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DuAnMau;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        internal static SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|QLBanHang.mdf;Integrated Security = True");
     }
 }

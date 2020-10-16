@@ -9,7 +9,7 @@ Email varchar(50) not null,
 DiaChi nvarchar(100) not null,
 VaiTro Tinyint not null,
 TinhTrang Tinyint not null,
-MatKhau nvarchar(50) not null,
+MatKhau nvarchar(100) DEFAULT  'e10adc3949ba59abbe56e057f20f883e',
 CONSTRAINT PK_NHANVIEN PRIMARY KEY (MaNV)
 )
 GO
@@ -40,7 +40,7 @@ SoLuong int not null,
 GiaNhap float not null,
 GiaBan float not null,
 HinhAnh varchar(400) not null,
-GhiChu nvarchar(20) not null,
+GhiChu nvarchar(100) not null,
 MaNV varchar(20) not null,
 CONSTRAINT PK_HANG PRIMARY KEY (MaHang),
 CONSTRAINT FK_HANG_KHACHHANG FOREIGN KEY(MaNV) REFERENCES NHANVIEN(MaNV),
@@ -204,7 +204,7 @@ CREATE PROC sp_InsertHANG
 AS
 BEGIN
 	DECLARE @maNV varchar(20);
-	SELECT @maNV = MaNV  FROM NHANVIEN WHERE Email = @Email
+	SELECT  MaNV = @maNV FROM NHANVIEN WHERE Email = @Email
 	INSERT INTO HANG(TenHang,SoLuong,GiaNhap,GiaBan,HinhAnh,GhiChu,MaNV)
 	VALUES(@TenHang,@SoLuong,@GiaNhap,@GiaBan,@HinhAnh,@GhiChu,@maNV)
 END
@@ -271,11 +271,11 @@ CREATE PROC sp_InsertKHACH
 	@TenKhach nvarchar(20),
 	@DiaChi nvarchar(50),
 	@GioiTinh nvarchar(5),
-	@email varchar(20)
+	@email varchar(50)
 AS
 BEGIN
 	DECLARE @MaNV varchar(20);
-	SELECT MaNV =@MaNV FROM NHANVIEN WHERE Email = @email
+	SELECT @MaNV MaNV FROM NHANVIEN WHERE Email = @email
 	INSERT INTO KHACHHANG VALUES(@DienThoai,@TenKhach,@DiaChi,@MaNV,@GioiTinh)
 END
 GO
@@ -292,8 +292,8 @@ CREATE PROC sp_UpdateKHACH
 AS
 BEGIN
 	DECLARE @MaNV varchar(20);
-	SELECT @MaNV = MaNV FROM NHANVIEN WHERE @email = Email
-	UPDATE KHACHHANG SET TenKhach = @TenKhach,DiaChi=@DiaChi,MaNV=@MaNV,GioiTinh=@GioiTinh
+	SELECT MaNV FROM NHANVIEN WHERE @email = Email
+	UPDATE KHACHHANG SET TenKhach = @TenKhach,DiaChi=@DiaChi,GioiTinh=@GioiTinh
 	WHERE @DienThoai= DienThoai
 END
 GO
@@ -313,10 +313,10 @@ IF OBJECT_ID('sp_SearchKhachHang') is not null
 DROP PROC sp_SearchKhachHang
 GO
 CREATE PROC sp_SearchKhachHang
-@sdt varchar(13)
+@tenKhach varchar(13)
 AS
 BEGIN
-	SELECT * FROM KHACHHANG WHERE DienThoai like '%' + @sdt + '%'
+	SELECT * FROM KHACHHANG WHERE TenKhach like '%' + @tenKhach + '%'
 END
 GO
 
@@ -342,4 +342,14 @@ BEGIN
 END
 GO
 
-
+IF OBJECT_ID('sp_TaoMatKhauMoi') is not null
+DROP PROC sp_TaoMatKhauMoi
+GO
+CREATE PROC sp_TaoMatKhauMoi
+	@email varchar(50),
+	@newPassword nvarchar(50)
+AS
+BEGIN
+	UPDATE NHANVIEN SET MatKhau = @newPassword WHERE @email = Email
+END
+GO
