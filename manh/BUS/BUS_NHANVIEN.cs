@@ -11,24 +11,7 @@ namespace BUS
 {
     public class BUS_NHANVIEN
     {
-        public string RandomString(int size, bool lowerCase)
-        {
-            StringBuilder builder = new StringBuilder();
-            System.Random random = new Random();
-            char ch;
-            for (int i = 0; i < size; i++)
-            {
-                ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
-                builder.Append(ch);
-            }
-            if (lowerCase) return builder.ToString().ToLower();
-            return builder.ToString();
-        }
-        public int RandomNumber(int min, int max)
-        {
-            Random random = new Random();
-            return random.Next(min, max);
-        }
+        
      
         public string encryption(string password)
         {
@@ -71,18 +54,7 @@ namespace BUS
         {
             return DAL_NHANVIEN.InsertNhanVien(nv);
         }
-        public static bool IsValid(string emailAdress)
-        {
-            try
-            {
-                MailAddress m = new MailAddress(emailAdress);
-                return true;
-            }
-            catch(FormatException)
-            {
-                return false;
-            }
-        }
+        
         public static bool updateNhanVien(DTO_NHANVIEN nv)
         {
             return DAL_NHANVIEN.UpdateNhanVien(nv);

@@ -17,7 +17,7 @@ namespace DAL
                 DBConnected.conn.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = DBConnected.conn;
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "sp_DangNhap";
                 cmd.Parameters.AddWithValue("email", nv.Email);
                 cmd.Parameters.AddWithValue("matkhau", nv.matKhau);
@@ -41,7 +41,7 @@ namespace DAL
                 DBConnected.conn.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = DBConnected.conn;
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "sp_QuenMatKhau";
                 cmd.Parameters.AddWithValue("email", email);
                 if (Convert.ToInt32(cmd.ExecuteScalar()) > 0)
@@ -63,8 +63,8 @@ namespace DAL
                 DBConnected.conn.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = DBConnected.conn;
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.CommandText = "sp_ChangePassWord";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_TaoMatKhauMoi";
                 cmd.Parameters.AddWithValue("email", email);
                 cmd.Parameters.AddWithValue("newPassword", newPassword);
                 if (Convert.ToInt32(cmd.ExecuteScalar()) > 0)

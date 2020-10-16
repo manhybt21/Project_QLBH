@@ -20,21 +20,29 @@ namespace DuAnMau
         {
             InitializeComponent();
         }
-        public void sendMail(string email, string matKhau)
+        public void sendMail(string email)
         {
             try
             {
-                SmtpClient client = new SmtpClient("manhldph10164@fpt.edu.vn", 25);
-                NetworkCredential cred = new NetworkCredential("sender@gmail.com", "chonduoi");
-                MailMessage Msg = new MailMessage();
-                Msg.From = new MailAddress("sender@gmail.com");
-                Msg.To.Add(email);
-                Msg.Subject = "bạn đã sử dụng chức năng quên mật khẩu";
-                Msg.Body = "mật khẩu mới là " + matKhau;
-                client.Credentials = cred;
+                //Sử dụn smtpclient để thực hiện gửi mail từ máy chủ
+                //Bắt buộc port phải là 587
+                SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+                client.UseDefaultCredentials = false;
                 client.EnableSsl = true;
+                //Sử dụng tên đăng nhập và mật khẩu muốn gửi mail
+                NetworkCredential network = new NetworkCredential("manhluong284@gmail.com","manh110701");
+
+                MailMessage Msg = new MailMessage();
+                //tài khoản muốn gửi mail
+                Msg.From = new MailAddress("manhluong284@gmail.com");
+                //tài khoản nhận mail
+                Msg.To.Add(new MailAddress(email));
+                Msg.Subject = "Chào Mừng Thành Viên Mới";
+                Msg.Body = "Chào anh/chị. Mật khẩu  của bạn là: 123456, Bạn có thể đăng nhập vào ứng dụng bằng mật khẩu mới. Cảm ơn!! ";
+                //quan trọng
+                client.Credentials = network;
                 client.Send(Msg);
-                MessageBox.Show("mật khẩu mới đã được gửi vui lòng kiểm tra email");
+                MessageBox.Show("Tạo Tài Khoản Thành Công");
 
             }
             catch (Exception x)
@@ -97,7 +105,18 @@ namespace DuAnMau
             rad_quanTri.Checked = false;
             txt_emailNhanVien.Focus();
         }
-
+        public static bool IsValid(string emailAdress)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailAdress);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
         private void btn_luu_Click(object sender, EventArgs e)
         {
             int Role=0;//role = 0 là nhân viên
@@ -116,7 +135,7 @@ namespace DuAnMau
                 txt_emailNhanVien.Focus();
                 return;
             }   
-            else if (!BUS_NHANVIEN.IsValid(txt_emailNhanVien.Text.Trim()))
+            else if (!IsValid(txt_emailNhanVien.Text.Trim()))
             {
                 MessageBox.Show("Vui Lòng Nhập Email", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -150,7 +169,7 @@ namespace DuAnMau
                     MessageBox.Show("Thêm Nhân Viên Thành Công!");
                     ResetValue();
                     LoadGridView_NhanVien();
-                    sendMail(nv.Email,nv.matKhau);
+                    sendMail(nv.Email);
                 }
                 else
                 {
