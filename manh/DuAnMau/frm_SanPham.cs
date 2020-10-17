@@ -46,6 +46,10 @@ namespace DuAnMau
         }
         public void LoadGridViewSanPham()
         {
+            if (BUS_HANG.getHang().Rows.Count < 1)
+            {
+                return;
+            }
             dgv_SanPham.DataSource = BUS_HANG.getHang();
         }
         private void btn_moHinh_Click(object sender, EventArgs e)
@@ -110,56 +114,63 @@ namespace DuAnMau
 
         private void btn_suaSanPham_Click(object sender, EventArgs e)
         {
-            int intSoLuong;
-            float floatDonGiaNhap;
-            float floatDonGiaBan;
-            bool isInt = int.TryParse(txt_soLuongHang.Text.Trim().ToString(), out intSoLuong);
-            bool isFloatNhap = float.TryParse(txt_giaNhap.Text.Trim().ToString(), out floatDonGiaNhap);
-            bool isFloatBan = float.TryParse(txt_giaBan.Text.Trim().ToString(), out floatDonGiaBan);
-            if (txt_tenHang.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Tên Hàng Không Được Bỏ Trống");
-            }
-            else if (int.Parse(txt_giaNhap.Text) < 0 || !isFloatNhap)
-            {
-                MessageBox.Show("Giá Nhập Không Được Âm");
-            }
-            else if (int.Parse(txt_giaBan.Text) < 0 || !isFloatBan)
-            {
-                MessageBox.Show("Giá Bán Không Được Âm");
-            }
-            else if (txt_hinh.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn Phải Upload Hình");
-                btn_moHinh.Focus();
-                return;
-            }
-            else
-            {
-                DTO_HANG hang = new DTO_HANG(txt_tenHang.Text, int.Parse(txt_soLuongHang.Text), float.Parse(txt_giaNhap.Text), float.Parse(txt_giaBan.Text), txt_hinh.Text, txt_ghiChu.Text,cache.mail);
-                if(MessageBox.Show("Bạn Có Chắc Muốn Thay Đổi Dữ Liệu Không", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            try {
+                int intSoLuong;
+                float floatDonGiaNhap;
+                float floatDonGiaBan;
+                bool isInt = int.TryParse(txt_soLuongHang.Text.Trim().ToString(), out intSoLuong);
+                bool isFloatNhap = float.TryParse(txt_giaNhap.Text.Trim().ToString(), out floatDonGiaNhap);
+                bool isFloatBan = float.TryParse(txt_giaBan.Text.Trim().ToString(), out floatDonGiaBan);
+                if (txt_tenHang.Text.Trim().Length == 0)
                 {
-                    if (BUS_HANG.updateHang(hang))
-                    {
-                        if(txt_hinh.Text!= checkUrlImages)
-                        {
-                            File.Copy(fileAddress, fileSavePath, true);
-                        }
-                        MessageBox.Show("Sửa Dữ Liệu Thành Công");
-                        LoadGridViewSanPham();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Sửa Dữ Liệu Không Thành Công");
-                    }
+                    MessageBox.Show("Tên Hàng Không Được Bỏ Trống");
+                }
+                else if (int.Parse(txt_giaNhap.Text) < 0 || !isFloatNhap)
+                {
+                    MessageBox.Show("Giá Nhập Không Được Âm");
+                }
+                else if (int.Parse(txt_giaBan.Text) < 0 || !isFloatBan)
+                {
+                    MessageBox.Show("Giá Bán Không Được Âm");
+                }
+                else if (txt_hinh.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Bạn Phải Upload Hình");
+                    btn_moHinh.Focus();
+                    return;
                 }
                 else
                 {
-                    ResetValue();
-                    LoadGridViewSanPham();
-                }
+                    DTO_HANG hang = new DTO_HANG(txt_tenHang.Text, int.Parse(txt_soLuongHang.Text), float.Parse(txt_giaNhap.Text), float.Parse(txt_giaBan.Text), txt_hinh.Text, txt_ghiChu.Text, cache.mail);
+                    MessageBox.Show(cache.mail);
+                    if (MessageBox.Show("Bạn Có Chắc Muốn Thay Đổi Dữ Liệu Không", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        if (BUS_HANG.updateHang(hang))
+                        {
+                            if (txt_hinh.Text != checkUrlImages)
+                            {
+                                File.Copy(fileAddress, fileSavePath, true);
+                            }
+                            MessageBox.Show("Sửa Dữ Liệu Thành Công");
+                            LoadGridViewSanPham();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sửa Dữ Liệu Không Thành Công");
+                        }
+                    }
+                    else
+                    {
+                        ResetValue();
+                        LoadGridViewSanPham();
+                    }
 
+                }
             }
+            catch(Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void dgv_SanPham_CellClick(object sender, DataGridViewCellEventArgs e)

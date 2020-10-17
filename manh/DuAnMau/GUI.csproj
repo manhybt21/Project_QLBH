@@ -210,10 +210,10 @@
   <ItemGroup>
     <Content Include="icon app.ico" />
     <Content Include="QLBanHang.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="QLBanHang_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>QLBanHang.mdf</DependentUpon>
     </Content>
   </ItemGroup>
