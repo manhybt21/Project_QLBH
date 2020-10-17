@@ -24,6 +24,10 @@ namespace DAL
                 dt.Load(cmd.ExecuteReader());
                 return dt;
             }
+            catch (Exception)
+            {
+                return new DataTable();
+            }
             finally
             {
                 DBConnected.conn.Close();
@@ -46,7 +50,10 @@ namespace DAL
                 cmd.Parameters.AddWithValue("Email",hang.emailNV);
                 cmd.ExecuteNonQuery();
                 return true;
-
+            }
+            catch (Exception)
+            {
+                return false;
             }
             finally
             {
@@ -115,14 +122,26 @@ namespace DAL
         }
         public static DataTable ThongKeHang()
         {
-            DBConnected.conn.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = DBConnected.conn;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_ThongKeSp";
-            DataTable dt = new DataTable();
-            dt.Load(cmd.ExecuteReader());
-            return dt;
+            try
+            {
+                DBConnected.conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = DBConnected.conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_ThongKeSp";
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            catch (Exception)
+            {
+                return new DataTable();
+            }
+            finally
+            {
+                DBConnected.conn.Close();
+            }
+           
         }
         public static DataTable ThongKeTonKho()
         {

@@ -71,12 +71,8 @@ namespace DuAnMau
         }
         private void LoadGridView_NhanVien()
         {
-            dgv_NhanVien.DataSource = BUS.BUS_NHANVIEN.getNhanVien();
-            dgv_NhanVien.Columns[0].HeaderText = "Email";
-            dgv_NhanVien.Columns[0].HeaderText = "Tên Nhân Viên";
-            dgv_NhanVien.Columns[0].HeaderText = "Địa Chỉ";
-            dgv_NhanVien.Columns[0].HeaderText = "Vai Trò";
-            dgv_NhanVien.Columns[0].HeaderText = "Tình Trạng";
+            dgv_NhanVien.DataSource = BUS_NHANVIEN.getNhanVien();
+            
         }
         private void frm_NhanVien_Load(object sender, EventArgs e)
         {
@@ -232,10 +228,10 @@ namespace DuAnMau
                 btn_sua.Enabled = true;
                 btn_xoa.Enabled = true;
                 // lấy dữ liệu từ hàng
-                txt_emailNhanVien.Text = dgv_NhanVien.CurrentRow.Cells[0].Value.ToString();
-                txt_TenNhanVien.Text= dgv_NhanVien.CurrentRow.Cells[1].Value.ToString();
-                txt_DiaChiNhanVien.Text= dgv_NhanVien.CurrentRow.Cells[2].Value.ToString();
-                if (int.Parse(dgv_NhanVien.CurrentRow.Cells[3].Value.ToString()) == 1)
+                txt_emailNhanVien.Text = dgv_NhanVien.CurrentRow.Cells[3].Value.ToString();
+                txt_TenNhanVien.Text= dgv_NhanVien.CurrentRow.Cells[2].Value.ToString();
+                txt_DiaChiNhanVien.Text= dgv_NhanVien.CurrentRow.Cells[4].Value.ToString();
+                if (int.Parse(dgv_NhanVien.CurrentRow.Cells[5].Value.ToString()) == 1)
                 {
                     rad_quanTri.Checked = true;
                 }
@@ -243,7 +239,7 @@ namespace DuAnMau
                 {
                     rad_nhanVien.Checked = true;
                 }
-                if(int.Parse(dgv_NhanVien.CurrentRow.Cells["TinhTrang"].Value.ToString()) == 1)
+                if(int.Parse(dgv_NhanVien.CurrentRow.Cells[6].Value.ToString()) == 1)
                 {
                     rad_hoatDong.Checked = true;
                 }
