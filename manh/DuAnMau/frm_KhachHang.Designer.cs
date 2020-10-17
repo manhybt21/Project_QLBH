@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_KhachHang));
             this.btn_dongKhachHang = new System.Windows.Forms.Button();
             this.btn_danhSachKhachHang = new System.Windows.Forms.Button();
             this.btn_boQuaKhachHang = new System.Windows.Forms.Button();
@@ -53,82 +54,107 @@
             // 
             // btn_dongKhachHang
             // 
-            this.btn_dongKhachHang.Location = new System.Drawing.Point(839, 482);
+            this.btn_dongKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_dongKhachHang.Image")));
+            this.btn_dongKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_dongKhachHang.Location = new System.Drawing.Point(838, 482);
             this.btn_dongKhachHang.Name = "btn_dongKhachHang";
             this.btn_dongKhachHang.Size = new System.Drawing.Size(104, 49);
             this.btn_dongKhachHang.TabIndex = 39;
             this.btn_dongKhachHang.Text = "Đóng";
+            this.btn_dongKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_dongKhachHang.UseVisualStyleBackColor = true;
             this.btn_dongKhachHang.Click += new System.EventHandler(this.btn_dongKhachHang_Click);
             // 
             // btn_danhSachKhachHang
             // 
-            this.btn_danhSachKhachHang.Location = new System.Drawing.Point(677, 482);
+            this.btn_danhSachKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_danhSachKhachHang.Image")));
+            this.btn_danhSachKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_danhSachKhachHang.Location = new System.Drawing.Point(675, 482);
             this.btn_danhSachKhachHang.Name = "btn_danhSachKhachHang";
-            this.btn_danhSachKhachHang.Size = new System.Drawing.Size(147, 49);
+            this.btn_danhSachKhachHang.Size = new System.Drawing.Size(133, 49);
             this.btn_danhSachKhachHang.TabIndex = 38;
             this.btn_danhSachKhachHang.Text = "Danh Sách";
+            this.btn_danhSachKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_danhSachKhachHang.UseVisualStyleBackColor = true;
             this.btn_danhSachKhachHang.Click += new System.EventHandler(this.btn_danhSachKhachHang_Click);
             // 
             // btn_boQuaKhachHang
             // 
-            this.btn_boQuaKhachHang.Location = new System.Drawing.Point(538, 482);
+            this.btn_boQuaKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_boQuaKhachHang.Image")));
+            this.btn_boQuaKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_boQuaKhachHang.Location = new System.Drawing.Point(531, 482);
             this.btn_boQuaKhachHang.Name = "btn_boQuaKhachHang";
-            this.btn_boQuaKhachHang.Size = new System.Drawing.Size(124, 49);
+            this.btn_boQuaKhachHang.Size = new System.Drawing.Size(114, 49);
             this.btn_boQuaKhachHang.TabIndex = 37;
             this.btn_boQuaKhachHang.Text = "Bỏ Qua";
+            this.btn_boQuaKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_boQuaKhachHang.UseVisualStyleBackColor = true;
             this.btn_boQuaKhachHang.Click += new System.EventHandler(this.btn_boQuaKhachHang_Click);
             // 
             // btn_luuKhachHang
             // 
-            this.btn_luuKhachHang.Location = new System.Drawing.Point(403, 482);
+            this.btn_luuKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_luuKhachHang.Image")));
+            this.btn_luuKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_luuKhachHang.Location = new System.Drawing.Point(405, 482);
             this.btn_luuKhachHang.Name = "btn_luuKhachHang";
-            this.btn_luuKhachHang.Size = new System.Drawing.Size(120, 49);
+            this.btn_luuKhachHang.Size = new System.Drawing.Size(96, 49);
             this.btn_luuKhachHang.TabIndex = 36;
             this.btn_luuKhachHang.Text = "Lưu";
+            this.btn_luuKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_luuKhachHang.UseVisualStyleBackColor = true;
             this.btn_luuKhachHang.Click += new System.EventHandler(this.btn_luuKhachHang_Click);
             // 
             // btn_suaKhachHang
             // 
-            this.btn_suaKhachHang.Location = new System.Drawing.Point(277, 482);
+            this.btn_suaKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_suaKhachHang.Image")));
+            this.btn_suaKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_suaKhachHang.Location = new System.Drawing.Point(280, 482);
             this.btn_suaKhachHang.Name = "btn_suaKhachHang";
-            this.btn_suaKhachHang.Size = new System.Drawing.Size(111, 49);
+            this.btn_suaKhachHang.Size = new System.Drawing.Size(95, 49);
             this.btn_suaKhachHang.TabIndex = 35;
             this.btn_suaKhachHang.Text = "Sửa";
+            this.btn_suaKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_suaKhachHang.UseVisualStyleBackColor = true;
             this.btn_suaKhachHang.Click += new System.EventHandler(this.btn_suaKhachHang_Click);
             // 
             // btn_xoaKhachHang
             // 
-            this.btn_xoaKhachHang.Location = new System.Drawing.Point(148, 482);
+            this.btn_xoaKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_xoaKhachHang.Image")));
+            this.btn_xoaKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_xoaKhachHang.Location = new System.Drawing.Point(163, 482);
             this.btn_xoaKhachHang.Name = "btn_xoaKhachHang";
-            this.btn_xoaKhachHang.Size = new System.Drawing.Size(114, 49);
+            this.btn_xoaKhachHang.Size = new System.Drawing.Size(87, 49);
             this.btn_xoaKhachHang.TabIndex = 34;
             this.btn_xoaKhachHang.Text = "Xoá";
+            this.btn_xoaKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_xoaKhachHang.UseVisualStyleBackColor = true;
             this.btn_xoaKhachHang.Click += new System.EventHandler(this.btn_xoaKhachHang_Click);
             // 
             // btn_themKhachHang
             // 
-            this.btn_themKhachHang.Location = new System.Drawing.Point(22, 482);
+            this.btn_themKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_themKhachHang.Image")));
+            this.btn_themKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_themKhachHang.Location = new System.Drawing.Point(37, 482);
             this.btn_themKhachHang.Name = "btn_themKhachHang";
-            this.btn_themKhachHang.Size = new System.Drawing.Size(111, 49);
+            this.btn_themKhachHang.Size = new System.Drawing.Size(96, 49);
             this.btn_themKhachHang.TabIndex = 33;
             this.btn_themKhachHang.Text = "Thêm";
+            this.btn_themKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_themKhachHang.UseVisualStyleBackColor = true;
             this.btn_themKhachHang.Click += new System.EventHandler(this.btn_themKhachHang_Click);
             // 
             // btn_timKiemKhachHang
             // 
+            this.btn_timKiemKhachHang.AutoEllipsis = true;
             this.btn_timKiemKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_timKiemKhachHang.Location = new System.Drawing.Point(568, 397);
+            this.btn_timKiemKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_timKiemKhachHang.Image")));
+            this.btn_timKiemKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_timKiemKhachHang.Location = new System.Drawing.Point(574, 406);
             this.btn_timKiemKhachHang.Name = "btn_timKiemKhachHang";
-            this.btn_timKiemKhachHang.Size = new System.Drawing.Size(156, 58);
+            this.btn_timKiemKhachHang.Size = new System.Drawing.Size(140, 42);
             this.btn_timKiemKhachHang.TabIndex = 32;
             this.btn_timKiemKhachHang.Text = "Tìm Kiếm";
+            this.btn_timKiemKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_timKiemKhachHang.UseVisualStyleBackColor = true;
             this.btn_timKiemKhachHang.Click += new System.EventHandler(this.btn_timKiemKhachHang_Click);
             // 

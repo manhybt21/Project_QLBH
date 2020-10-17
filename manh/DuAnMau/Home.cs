@@ -83,7 +83,7 @@ namespace DuAnMau
         {
             if (cache.session == 1)
             {
-                thongtinnvToolStripMenuItem.Text = "Chào " + cache.mail;
+                lbl_emailNv.Text = "Chào " + cache.mail;
                 danhMục2ToolStripMenuItem.Visible = true;
                 thoátToolStripMenuItem.Enabled = true;//enable = true hien
                 danhMục2ToolStripMenuItem.Enabled = true;
@@ -171,8 +171,8 @@ namespace DuAnMau
             resetValue();
             if (cache.profile == 1)
             {
-                thongtinnvToolStripMenuItem.Text = null;
-                //profile = 0;
+                lbl_emailNv.Text = null;
+                cache.profile = 0;
             }
         }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_NhanVien));
             this.btn_dong = new System.Windows.Forms.Button();
             this.btn_danhSach = new System.Windows.Forms.Button();
             this.btn_boQua = new System.Windows.Forms.Button();
@@ -58,82 +59,106 @@
             // 
             // btn_dong
             // 
+            this.btn_dong.Image = ((System.Drawing.Image)(resources.GetObject("btn_dong.Image")));
+            this.btn_dong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_dong.Location = new System.Drawing.Point(876, 545);
             this.btn_dong.Name = "btn_dong";
             this.btn_dong.Size = new System.Drawing.Size(104, 49);
             this.btn_dong.TabIndex = 55;
             this.btn_dong.Text = "Đóng";
+            this.btn_dong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_dong.UseVisualStyleBackColor = true;
             this.btn_dong.Click += new System.EventHandler(this.btn_dong_Click);
             // 
             // btn_danhSach
             // 
+            this.btn_danhSach.Image = ((System.Drawing.Image)(resources.GetObject("btn_danhSach.Image")));
+            this.btn_danhSach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_danhSach.Location = new System.Drawing.Point(714, 545);
             this.btn_danhSach.Name = "btn_danhSach";
             this.btn_danhSach.Size = new System.Drawing.Size(147, 49);
             this.btn_danhSach.TabIndex = 54;
             this.btn_danhSach.Text = "Danh Sách";
+            this.btn_danhSach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_danhSach.UseVisualStyleBackColor = true;
             this.btn_danhSach.Click += new System.EventHandler(this.btn_danhSach_Click);
             // 
             // btn_boQua
             // 
+            this.btn_boQua.Image = ((System.Drawing.Image)(resources.GetObject("btn_boQua.Image")));
+            this.btn_boQua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_boQua.Location = new System.Drawing.Point(575, 545);
             this.btn_boQua.Name = "btn_boQua";
-            this.btn_boQua.Size = new System.Drawing.Size(124, 49);
+            this.btn_boQua.Size = new System.Drawing.Size(112, 49);
             this.btn_boQua.TabIndex = 53;
             this.btn_boQua.Text = "Bỏ Qua";
+            this.btn_boQua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_boQua.UseVisualStyleBackColor = true;
             this.btn_boQua.Click += new System.EventHandler(this.btn_boQua_Click);
             // 
             // btn_luu
             // 
+            this.btn_luu.Image = ((System.Drawing.Image)(resources.GetObject("btn_luu.Image")));
+            this.btn_luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_luu.Location = new System.Drawing.Point(440, 545);
             this.btn_luu.Name = "btn_luu";
-            this.btn_luu.Size = new System.Drawing.Size(120, 49);
+            this.btn_luu.Size = new System.Drawing.Size(90, 49);
             this.btn_luu.TabIndex = 52;
             this.btn_luu.Text = "Lưu";
+            this.btn_luu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_luu.UseVisualStyleBackColor = true;
             this.btn_luu.Click += new System.EventHandler(this.btn_luu_Click);
             // 
             // btn_sua
             // 
-            this.btn_sua.Location = new System.Drawing.Point(314, 545);
+            this.btn_sua.Image = ((System.Drawing.Image)(resources.GetObject("btn_sua.Image")));
+            this.btn_sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_sua.Location = new System.Drawing.Point(324, 545);
             this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(111, 49);
+            this.btn_sua.Size = new System.Drawing.Size(88, 49);
             this.btn_sua.TabIndex = 51;
             this.btn_sua.Text = "Sửa";
+            this.btn_sua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_sua.UseVisualStyleBackColor = true;
             this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_xoa
             // 
+            this.btn_xoa.Image = ((System.Drawing.Image)(resources.GetObject("btn_xoa.Image")));
+            this.btn_xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_xoa.Location = new System.Drawing.Point(185, 545);
             this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(114, 49);
+            this.btn_xoa.Size = new System.Drawing.Size(93, 49);
             this.btn_xoa.TabIndex = 50;
             this.btn_xoa.Text = "Xoá";
+            this.btn_xoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_xoa.UseVisualStyleBackColor = true;
             this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // btn_them
             // 
+            this.btn_them.Image = ((System.Drawing.Image)(resources.GetObject("btn_them.Image")));
+            this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_them.Location = new System.Drawing.Point(59, 545);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(111, 49);
+            this.btn_them.Size = new System.Drawing.Size(92, 49);
             this.btn_them.TabIndex = 49;
             this.btn_them.Text = "Thêm";
+            this.btn_them.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_them.UseVisualStyleBackColor = true;
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // btn_timKiem
             // 
             this.btn_timKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_timKiem.Location = new System.Drawing.Point(603, 458);
+            this.btn_timKiem.Image = ((System.Drawing.Image)(resources.GetObject("btn_timKiem.Image")));
+            this.btn_timKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_timKiem.Location = new System.Drawing.Point(603, 467);
             this.btn_timKiem.Name = "btn_timKiem";
-            this.btn_timKiem.Size = new System.Drawing.Size(156, 58);
+            this.btn_timKiem.Size = new System.Drawing.Size(139, 42);
             this.btn_timKiem.TabIndex = 48;
             this.btn_timKiem.Text = "Tìm Kiếm";
+            this.btn_timKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_timKiem.UseVisualStyleBackColor = true;
             this.btn_timKiem.Click += new System.EventHandler(this.btn_timKiem_Click);
             // 

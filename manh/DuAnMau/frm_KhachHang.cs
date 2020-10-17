@@ -64,33 +64,39 @@ namespace DuAnMau
         }
         private void btn_luuKhachHang_Click(object sender, EventArgs e)
         {
-            string phai = "Nam";
-            int soDT;
-            bool isInt = int.TryParse(txt_dienThoai.Text.Trim().ToString(), out soDT);
-            if (rad_nu.Checked == true)
-            {
-                phai = "Nữ";
-            }
-            if (!isInt || int.Parse(txt_dienThoai.Text) < 0)
-            {
-                MessageBox.Show("Số Điện Thoại Phải Là Số Nguyên");
-                txt_dienThoai.Focus();
-                return;
-            }
-            else
-            {
-                MessageBox.Show(cache.mail);
-                DTO_KHACH kh = new DTO_KHACH(txt_dienThoai.Text, txt_hoVaTenKhach.Text, txt_DiaChiKhach.Text,cache.mail, phai);
-                if (BUS_KHACH.insertKhach(kh))
+            try {
+                string phai = "Nam";
+                int soDT;
+                bool isInt = int.TryParse(txt_dienThoai.Text.Trim().ToString(), out soDT);
+                if (rad_nu.Checked == true)
                 {
-                    MessageBox.Show("Thêm Thông Tin Khách Thành Công");
-                    ResetValue();
-                    LoadGridViewKhach();
+                    phai = "Nữ";
+                }
+                if (!isInt || int.Parse(txt_dienThoai.Text) < 0)
+                {
+                    MessageBox.Show("Số Điện Thoại Phải Là Số Nguyên");
+                    txt_dienThoai.Focus();
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("Thêm Thông Tin Khách Không Thành Công");
+                    MessageBox.Show(cache.mail);
+                    DTO_KHACH kh = new DTO_KHACH(txt_dienThoai.Text, txt_hoVaTenKhach.Text, txt_DiaChiKhach.Text, cache.mail, phai);
+                    if (BUS_KHACH.insertKhach(kh))
+                    {
+                        MessageBox.Show("Thêm Thông Tin Khách Thành Công");
+                        ResetValue();
+                        LoadGridViewKhach();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm Thông Tin Khách Không Thành Công");
+                    }
                 }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -102,49 +108,60 @@ namespace DuAnMau
 
         private void btn_suaKhachHang_Click(object sender, EventArgs e)
         {
-            string phai = dgv_KhachHang.CurrentRow.Cells[3].Value.ToString();
-            DTO_KHACH kh = new DTO_KHACH(txt_dienThoai.Text, txt_hoVaTenKhach.Text, txt_DiaChiKhach.Text, cache.mail, phai);
-            if (MessageBox.Show("Bạn Có Muốn Thay Đổi Thông Tin Nhân Viên Không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                if (BUS_KHACH.updateKhach(kh))
+            try {
+                string phai = dgv_KhachHang.CurrentRow.Cells[3].Value.ToString();
+                DTO_KHACH kh = new DTO_KHACH(txt_dienThoai.Text, txt_hoVaTenKhach.Text, txt_DiaChiKhach.Text, cache.mail, phai);
+                if (MessageBox.Show("Bạn Có Muốn Thay Đổi Thông Tin Nhân Viên Không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Sửa Thông Tin Thành Công");
-                    ResetValue();
-                    LoadGridViewKhach();
+                    if (BUS_KHACH.updateKhach(kh))
+                    {
+                        MessageBox.Show("Sửa Thông Tin Thành Công");
+                        ResetValue();
+                        LoadGridViewKhach();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa Thông Tin Không Thành Công");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Sửa Thông Tin Không Thành Công");
+                    ResetValue();
+                    LoadGridViewKhach();
                 }
             }
-            else
+            catch (Exception ex)
             {
-                ResetValue();
-                LoadGridViewKhach();
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btn_xoaKhachHang_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn Có Chắc Muốn Xoá Nhân Viên Này", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                if (BUS_KHACH.deleteKhach(txt_dienThoai.Text))
+            try {
+                if (MessageBox.Show("Bạn Có Chắc Muốn Xoá Nhân Viên Này", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xoá Dữ Liệu Thành Công");
-                    ResetValue();
-                    LoadGridViewKhach();
+                    if (BUS_KHACH.deleteKhach(txt_dienThoai.Text))
+                    {
+                        MessageBox.Show("Xoá Dữ Liệu Thành Công");
+                        ResetValue();
+                        LoadGridViewKhach();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xoá Dữ Liệu Không Thành Công");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Xoá Dữ Liệu Không Thành Công");
+                    ResetValue();
+                    LoadGridViewKhach();
                 }
             }
-            else
+            catch (Exception ex)
             {
-                ResetValue();
-                LoadGridViewKhach();
+                MessageBox.Show(ex.Message);
             }
-
         }
 
         private void btn_boQuaKhachHang_Click(object sender, EventArgs e)
@@ -166,29 +183,35 @@ namespace DuAnMau
 
         private void dgv_KhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btn_suaKhachHang.Enabled = true;
-            btn_xoaKhachHang.Enabled = true;
-            txt_hoVaTenKhach.Enabled = true;
-            txt_DiaChiKhach.Enabled = true;
-            rad_nam.Enabled = true;
-            rad_nu.Enabled = true;
-            if (dgv_KhachHang.Rows.Count > 1)
-            {
-                txt_dienThoai.Text = dgv_KhachHang.CurrentRow.Cells[0].Value.ToString();
-                txt_hoVaTenKhach.Text = dgv_KhachHang.CurrentRow.Cells[1].Value.ToString();
-                txt_DiaChiKhach.Text = dgv_KhachHang.CurrentRow.Cells[2].Value.ToString();
-                if (dgv_KhachHang.CurrentRow.Cells[4].Value.ToString() == "Nam")
+            try {
+                btn_suaKhachHang.Enabled = true;
+                btn_xoaKhachHang.Enabled = true;
+                txt_hoVaTenKhach.Enabled = true;
+                txt_DiaChiKhach.Enabled = true;
+                rad_nam.Enabled = true;
+                rad_nu.Enabled = true;
+                if (dgv_KhachHang.Rows.Count > 1)
                 {
-                    rad_nam.Checked = true;
+                    txt_dienThoai.Text = dgv_KhachHang.CurrentRow.Cells[0].Value.ToString();
+                    txt_hoVaTenKhach.Text = dgv_KhachHang.CurrentRow.Cells[1].Value.ToString();
+                    txt_DiaChiKhach.Text = dgv_KhachHang.CurrentRow.Cells[2].Value.ToString();
+                    if (dgv_KhachHang.CurrentRow.Cells[4].Value.ToString() == "Nam")
+                    {
+                        rad_nam.Checked = true;
+                    }
+                    if (dgv_KhachHang.CurrentRow.Cells[4].Value.ToString() == "Nữ")
+                    {
+                        rad_nu.Checked = true;
+                    }
                 }
-                if (dgv_KhachHang.CurrentRow.Cells[4].Value.ToString() == "Nữ")
+                else
                 {
-                    rad_nu.Checked = true;
+                    MessageBox.Show("Không Có Dữ Liệu Trong Bảng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Không Có Dữ Liệu Trong Bảng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ex.Message);
             }
         }
 
