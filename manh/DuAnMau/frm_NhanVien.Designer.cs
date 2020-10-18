@@ -41,17 +41,17 @@
             this.dgv_NhanVien = new System.Windows.Forms.DataGridView();
             this.rad_quanTri = new System.Windows.Forms.RadioButton();
             this.rad_nhanVien = new System.Windows.Forms.RadioButton();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_role = new System.Windows.Forms.Label();
             this.rad_khongHoatDong = new System.Windows.Forms.RadioButton();
             this.rad_hoatDong = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_tinhTrang = new System.Windows.Forms.Label();
             this.txt_TenNhanVien = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_tenNhanVien = new System.Windows.Forms.Label();
             this.txt_DiaChiNhanVien = new System.Windows.Forms.TextBox();
             this.txt_emailNhanVien = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_diaChi = new System.Windows.Forms.Label();
+            this.lbl_email = new System.Windows.Forms.Label();
+            this.lbl_NhanVien = new System.Windows.Forms.Label();
             this.pan_Role = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NhanVien)).BeginInit();
             this.pan_Role.SuspendLayout();
@@ -205,17 +205,17 @@
             this.rad_nhanVien.Text = "Nhân Viên";
             this.rad_nhanVien.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // lbl_role
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Blue;
-            this.label6.Location = new System.Drawing.Point(45, 191);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 22);
-            this.label6.TabIndex = 43;
-            this.label6.Text = "Role";
+            this.lbl_role.AutoSize = true;
+            this.lbl_role.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_role.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_role.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_role.Location = new System.Drawing.Point(45, 191);
+            this.lbl_role.Name = "lbl_role";
+            this.lbl_role.Size = new System.Drawing.Size(47, 22);
+            this.lbl_role.TabIndex = 43;
+            this.lbl_role.Text = "Role";
             // 
             // rad_khongHoatDong
             // 
@@ -239,17 +239,17 @@
             this.rad_hoatDong.Text = "Hoạt Động";
             this.rad_hoatDong.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // lbl_tinhTrang
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(567, 189);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 22);
-            this.label5.TabIndex = 40;
-            this.label5.Text = "Tình Trạng";
+            this.lbl_tinhTrang.AutoSize = true;
+            this.lbl_tinhTrang.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_tinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tinhTrang.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_tinhTrang.Location = new System.Drawing.Point(567, 189);
+            this.lbl_tinhTrang.Name = "lbl_tinhTrang";
+            this.lbl_tinhTrang.Size = new System.Drawing.Size(99, 22);
+            this.lbl_tinhTrang.TabIndex = 40;
+            this.lbl_tinhTrang.Text = "Tình Trạng";
             // 
             // txt_TenNhanVien
             // 
@@ -258,16 +258,16 @@
             this.txt_TenNhanVien.Size = new System.Drawing.Size(274, 26);
             this.txt_TenNhanVien.TabIndex = 39;
             // 
-            // label4
+            // lbl_tenNhanVien
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(42, 134);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 22);
-            this.label4.TabIndex = 38;
-            this.label4.Text = "Tên Nhân Viên";
+            this.lbl_tenNhanVien.AutoSize = true;
+            this.lbl_tenNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tenNhanVien.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_tenNhanVien.Location = new System.Drawing.Point(42, 134);
+            this.lbl_tenNhanVien.Name = "lbl_tenNhanVien";
+            this.lbl_tenNhanVien.Size = new System.Drawing.Size(131, 22);
+            this.lbl_tenNhanVien.TabIndex = 38;
+            this.lbl_tenNhanVien.Text = "Tên Nhân Viên";
             // 
             // txt_DiaChiNhanVien
             // 
@@ -284,38 +284,38 @@
             this.txt_emailNhanVien.Size = new System.Drawing.Size(274, 26);
             this.txt_emailNhanVien.TabIndex = 36;
             // 
-            // label3
+            // lbl_diaChi
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(484, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 22);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Địa Chỉ";
+            this.lbl_diaChi.AutoSize = true;
+            this.lbl_diaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_diaChi.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_diaChi.Location = new System.Drawing.Point(484, 88);
+            this.lbl_diaChi.Name = "lbl_diaChi";
+            this.lbl_diaChi.Size = new System.Drawing.Size(69, 22);
+            this.lbl_diaChi.TabIndex = 35;
+            this.lbl_diaChi.Text = "Địa Chỉ";
             // 
-            // label2
+            // lbl_email
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(42, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 22);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Email";
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_email.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_email.Location = new System.Drawing.Point(42, 87);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(54, 22);
+            this.lbl_email.TabIndex = 34;
+            this.lbl_email.Text = "Email";
             // 
-            // label1
+            // lbl_NhanVien
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(421, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 32);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Nhân Viên";
+            this.lbl_NhanVien.AutoSize = true;
+            this.lbl_NhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_NhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lbl_NhanVien.Location = new System.Drawing.Point(421, 9);
+            this.lbl_NhanVien.Name = "lbl_NhanVien";
+            this.lbl_NhanVien.Size = new System.Drawing.Size(148, 32);
+            this.lbl_NhanVien.TabIndex = 33;
+            this.lbl_NhanVien.Text = "Nhân Viên";
             // 
             // pan_Role
             // 
@@ -342,17 +342,17 @@
             this.Controls.Add(this.btn_timKiem);
             this.Controls.Add(this.txt_timKiemNhanVien);
             this.Controls.Add(this.dgv_NhanVien);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lbl_role);
             this.Controls.Add(this.rad_khongHoatDong);
             this.Controls.Add(this.rad_hoatDong);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbl_tinhTrang);
             this.Controls.Add(this.txt_TenNhanVien);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbl_tenNhanVien);
             this.Controls.Add(this.txt_DiaChiNhanVien);
             this.Controls.Add(this.txt_emailNhanVien);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_diaChi);
+            this.Controls.Add(this.lbl_email);
+            this.Controls.Add(this.lbl_NhanVien);
             this.Name = "frm_NhanVien";
             this.Text = "frm_NhanVien";
             this.Load += new System.EventHandler(this.frm_NhanVien_Load);
@@ -378,17 +378,17 @@
         private System.Windows.Forms.DataGridView dgv_NhanVien;
         private System.Windows.Forms.RadioButton rad_quanTri;
         private System.Windows.Forms.RadioButton rad_nhanVien;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_role;
         private System.Windows.Forms.RadioButton rad_khongHoatDong;
         private System.Windows.Forms.RadioButton rad_hoatDong;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_tinhTrang;
         private System.Windows.Forms.TextBox txt_TenNhanVien;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_tenNhanVien;
         private System.Windows.Forms.TextBox txt_DiaChiNhanVien;
         private System.Windows.Forms.TextBox txt_emailNhanVien;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_diaChi;
+        private System.Windows.Forms.Label lbl_email;
+        private System.Windows.Forms.Label lbl_NhanVien;
         private System.Windows.Forms.Panel pan_Role;
     }
 }

@@ -54,7 +54,7 @@ namespace DuAnMau
         }
         private void VaiTroNV()
         {
-            nhânViênToolStripMenuItem1.Visible = false;
+            nhânViênToolStripMenuItem.Visible = false;
             thốngKêToolStripMenuItem.Visible = false;
         }
         private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -84,13 +84,13 @@ namespace DuAnMau
             if (cache.session == 1)
             {
                 lbl_emailNv.Text = "Chào " + cache.mail;
-                danhMục2ToolStripMenuItem.Visible = true;
+                danhMụcToolStripMenuItem.Visible = true;
                 thoátToolStripMenuItem.Enabled = true;//enable = true hien
-                danhMục2ToolStripMenuItem.Enabled = true;
-                nhânViênToolStripMenuItem1.Visible = true;
+                danhMụcToolStripMenuItem.Enabled = true;
+                nhânViênToolStripMenuItem.Visible = true;
                 đăngNhậpToolStripMenuItem.Enabled = false;
-                kháchHàngToolStripMenuItem1.Enabled = true;
-                nhânViênToolStripMenuItem1.Enabled = true;
+                kháchHàngToolStripMenuItem.Enabled = true;
+                nhânViênToolStripMenuItem.Enabled = true;
                 thốngKêToolStripMenuItem.Enabled = true;
                 if (int.Parse(dn.vaitro) == 0)
                 {
@@ -99,8 +99,8 @@ namespace DuAnMau
             }
             else
             {
-                nhânViênToolStripMenuItem1.Visible = false;
-                danhMục2ToolStripMenuItem.Enabled = false;
+                nhânViênToolStripMenuItem.Visible = false;
+                danhMụcToolStripMenuItem.Enabled = false;
                 thoátToolStripMenuItem.Enabled = false;
                 thốngKêToolStripMenuItem.Enabled = false;
                 đăngNhậpToolStripMenuItem.Enabled = true;
@@ -131,22 +131,6 @@ namespace DuAnMau
                 ActiveChildFrom("frm_DoiMatKhau");
             }
         }
-
-        private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void thốngKêSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tk = new frm_ThongKe();
@@ -177,7 +161,7 @@ namespace DuAnMau
         }
 
         
-        private void sảnPhẩmToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             sp = new frm_SanPham();
             if (!CheckExitsFrom("frm_SanPham"))
@@ -191,7 +175,7 @@ namespace DuAnMau
             }
         }
 
-        private void nhânViênToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             nv = new frm_NhanVien();
             if (!CheckExitsFrom("frm_NhanVien"))
@@ -205,7 +189,7 @@ namespace DuAnMau
             }
         }
 
-        private void kháchHàngToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             kh = new frm_KhachHang();
             if (!CheckExitsFrom("frm_KhachHang"))
@@ -218,17 +202,6 @@ namespace DuAnMau
                 ActiveChildFrom("frm_KhachHang");
             }
         }
-
-        private void danhMục2ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void thongtinnvToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
