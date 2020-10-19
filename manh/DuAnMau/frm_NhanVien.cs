@@ -115,164 +115,191 @@ namespace DuAnMau
         }
         private void btn_luu_Click(object sender, EventArgs e)
         {
-            int Role=0;//role = 0 là nhân viên
-            if (rad_quanTri.Checked)
+            try
             {
-                Role = 1;
-            }
-            int tinhTrang = 0;// tình trạng = 0 là không hoạt động
-            if (rad_hoatDong.Checked)
-            {
-                tinhTrang = 1;
-            }
-            if(txt_emailNhanVien.Text.Trim().Length==0)//kiểm tra email đã nhập chưa
-            {
-                MessageBox.Show("Vui Lòng Nhập Email", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txt_emailNhanVien.Focus();
-                return;
-            }   
-            else if (!IsValid(txt_emailNhanVien.Text.Trim()))
-            {
-                MessageBox.Show("Vui Lòng Nhập Email", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (txt_TenNhanVien.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Vui Lòng Nhập Tên Nhân Viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txt_TenNhanVien.Focus();
-                return;
-            }
-            else if (txt_DiaChiNhanVien.Text.Trim().Length==0)
-            {
-                MessageBox.Show("Vui Lòng Nhập Địa Chỉ Nhân Viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txt_DiaChiNhanVien.Focus();
-                return;
-            }
-            else if(rad_hoatDong.Checked==false && rad_khongHoatDong.Checked == false)
-            {
-                MessageBox.Show("Vui Lòng Chọn Tình Trạng Tài Khoản", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            else if(rad_nhanVien.Checked==false&& rad_quanTri.Checked == false)
-            {
-                MessageBox.Show("Vui Lòng Chọn Chức Vụ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            else
-            {
-                DTO_NHANVIEN nv = new DTO_NHANVIEN(txt_emailNhanVien.Text, txt_TenNhanVien.Text, txt_DiaChiNhanVien.Text, Role, tinhTrang);
-                if (BUS_NHANVIEN.insertNhanVien(nv))
+                int Role = 0;//role = 0 là nhân viên
+                if (rad_quanTri.Checked)
                 {
-                    MessageBox.Show("Thêm Nhân Viên Thành Công!");
-                    ResetValue();
-                    LoadGridView_NhanVien();
-                    sendMail(nv.Email);
+                    Role = 1;
+                }
+                int tinhTrang = 0;// tình trạng = 0 là không hoạt động
+                if (rad_hoatDong.Checked)
+                {
+                    tinhTrang = 1;
+                }
+                if (txt_emailNhanVien.Text.Trim().Length == 0)//kiểm tra email đã nhập chưa
+                {
+                    MessageBox.Show("Vui Lòng Nhập Email", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_emailNhanVien.Focus();
+                    return;
+                }
+                else if (!IsValid(txt_emailNhanVien.Text.Trim()))
+                {
+                    MessageBox.Show("Vui Lòng Nhập Email", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (txt_TenNhanVien.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Vui Lòng Nhập Tên Nhân Viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_TenNhanVien.Focus();
+                    return;
+                }
+                else if (txt_DiaChiNhanVien.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Vui Lòng Nhập Địa Chỉ Nhân Viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_DiaChiNhanVien.Focus();
+                    return;
+                }
+                else if (rad_hoatDong.Checked == false && rad_khongHoatDong.Checked == false)
+                {
+                    MessageBox.Show("Vui Lòng Chọn Tình Trạng Tài Khoản", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                else if (rad_nhanVien.Checked == false && rad_quanTri.Checked == false)
+                {
+                    MessageBox.Show("Vui Lòng Chọn Chức Vụ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("Thêm Không Thành Công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DTO_NHANVIEN nv = new DTO_NHANVIEN(txt_emailNhanVien.Text, txt_TenNhanVien.Text, txt_DiaChiNhanVien.Text, Role, tinhTrang);
+                    if (BUS_NHANVIEN.insertNhanVien(nv))
+                    {
+                        MessageBox.Show("Thêm Nhân Viên Thành Công!");
+                        ResetValue();
+                        LoadGridView_NhanVien();
+                        sendMail(nv.Email);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm Không Thành Công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            if (txt_TenNhanVien.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Vui Lòng Nhập Tên Nhân Viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txt_TenNhanVien.Focus();
-                return;
-            }
-            else if (txt_DiaChiNhanVien.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Vui Lòng Nhập Địa Chỉ Nhân Viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txt_DiaChiNhanVien.Focus();
-                return;
-            }
-            else
-            {
-                int role = 0;
-                int tinhTrang = 0;
-                if (rad_quanTri.Checked) { role = 1; }
-                if (rad_hoatDong.Checked) { tinhTrang = 1; }
-                DTO_NHANVIEN nv = new DTO_NHANVIEN(txt_emailNhanVien.Text, txt_TenNhanVien.Text, txt_DiaChiNhanVien.Text, role, tinhTrang);
-                if(MessageBox.Show("Bạn Có Muốn Thay Đổi Thông Tin Nhân Viên Không","Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            try {
+                if (txt_TenNhanVien.Text.Trim().Length == 0)
                 {
-                    if (BUS_NHANVIEN.updateNhanVien(nv)) {
-                        MessageBox.Show("Sửa Thông Tin Thành Công");
-                        ResetValue();
-                        LoadGridView_NhanVien();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Sửa Thông Tin Không Thành Công");
-                    }
+                    MessageBox.Show("Vui Lòng Nhập Tên Nhân Viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_TenNhanVien.Focus();
+                    return;
+                }
+                else if (txt_DiaChiNhanVien.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Vui Lòng Nhập Địa Chỉ Nhân Viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_DiaChiNhanVien.Focus();
+                    return;
                 }
                 else
                 {
-                    ResetValue();
+                    int role = 0;
+                    int tinhTrang = 0;
+                    if (rad_quanTri.Checked) { role = 1; }
+                    if (rad_hoatDong.Checked) { tinhTrang = 1; }
+                    DTO_NHANVIEN nv = new DTO_NHANVIEN(txt_emailNhanVien.Text, txt_TenNhanVien.Text, txt_DiaChiNhanVien.Text, role, tinhTrang);
+                    if (MessageBox.Show("Bạn Có Muốn Thay Đổi Thông Tin Nhân Viên Không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        if (BUS_NHANVIEN.updateNhanVien(nv))
+                        {
+                            MessageBox.Show("Sửa Thông Tin Thành Công");
+                            ResetValue();
+                            LoadGridView_NhanVien();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sửa Thông Tin Không Thành Công");
+                        }
+                    }
+                    else
+                    {
+                        ResetValue();
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void dgv_NhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_NhanVien.Rows.Count > 1)
-            {
-                btn_luu.Enabled = false;
-                txt_TenNhanVien.Enabled = true;
-                txt_DiaChiNhanVien.Enabled = true;
-                rad_nhanVien.Enabled = true;
-                rad_quanTri.Enabled = true;
-                rad_hoatDong.Enabled = true;
-                rad_khongHoatDong.Enabled = true;
-                btn_sua.Enabled = true;
-                btn_xoa.Enabled = true;
-                // lấy dữ liệu từ hàng
-                txt_emailNhanVien.Text = dgv_NhanVien.CurrentRow.Cells[3].Value.ToString();
-                txt_TenNhanVien.Text= dgv_NhanVien.CurrentRow.Cells[2].Value.ToString();
-                txt_DiaChiNhanVien.Text= dgv_NhanVien.CurrentRow.Cells[4].Value.ToString();
-                if (int.Parse(dgv_NhanVien.CurrentRow.Cells[5].Value.ToString()) == 1)
+            try {
+                if (dgv_NhanVien.Rows.Count > 1)
                 {
-                    rad_quanTri.Checked = true;
+                    btn_luu.Enabled = false;
+                    txt_TenNhanVien.Enabled = true;
+                    txt_DiaChiNhanVien.Enabled = true;
+                    rad_nhanVien.Enabled = true;
+                    rad_quanTri.Enabled = true;
+                    rad_hoatDong.Enabled = true;
+                    rad_khongHoatDong.Enabled = true;
+                    btn_sua.Enabled = true;
+                    btn_xoa.Enabled = true;
+                    // lấy dữ liệu từ hàng
+                    txt_emailNhanVien.Text = dgv_NhanVien.CurrentRow.Cells[3].Value.ToString();
+                    txt_TenNhanVien.Text = dgv_NhanVien.CurrentRow.Cells[2].Value.ToString();
+                    txt_DiaChiNhanVien.Text = dgv_NhanVien.CurrentRow.Cells[4].Value.ToString();
+                    if (int.Parse(dgv_NhanVien.CurrentRow.Cells[5].Value.ToString()) == 1)
+                    {
+                        rad_quanTri.Checked = true;
+                    }
+                    else
+                    {
+                        rad_nhanVien.Checked = true;
+                    }
+                    if (int.Parse(dgv_NhanVien.CurrentRow.Cells[6].Value.ToString()) == 1)
+                    {
+                        rad_hoatDong.Checked = true;
+                    }
+                    else
+                    {
+                        rad_khongHoatDong.Checked = true;
+                    }
                 }
                 else
                 {
-                    rad_nhanVien.Checked = true;
-                }
-                if(int.Parse(dgv_NhanVien.CurrentRow.Cells[6].Value.ToString()) == 1)
-                {
-                    rad_hoatDong.Checked = true;
-                }
-                else
-                {
-                    rad_khongHoatDong.Checked = true;
+                    MessageBox.Show("Không Có Dữ Liệu Trong Bảng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Không Có Dữ Liệu Trong Bảng","Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            string email = txt_emailNhanVien.Text;
-            if(MessageBox.Show("Bạn Có Chắc Muốn Xoá Nhân Viên Này","Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            try
             {
-                if (BUS_NHANVIEN.deleteNhanVien(email))
+                string email = txt_emailNhanVien.Text;
+                if (MessageBox.Show("Bạn Có Chắc Muốn Xoá Nhân Viên Này", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xoá Dữ Liệu Thành Công");
-                    ResetValue();
-                    LoadGridView_NhanVien();
+                    if (BUS_NHANVIEN.deleteNhanVien(email))
+                    {
+                        MessageBox.Show("Xoá Dữ Liệu Thành Công");
+                        ResetValue();
+                        LoadGridView_NhanVien();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xoá Dữ Liệu Không Thành Công");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Xoá Dữ Liệu Không Thành Công");
+                    ResetValue();
                 }
             }
-            else
+            catch (Exception ex)
             {
-                ResetValue();
+                MessageBox.Show(ex.Message);
             }
         }
 

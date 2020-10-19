@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_SanPham));
             this.label8 = new System.Windows.Forms.Label();
             this.btn_moHinh = new System.Windows.Forms.Button();
             this.pic_SanPham = new System.Windows.Forms.PictureBox();
@@ -209,11 +210,14 @@
             // 
             this.btn_timKiemSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_timKiemSanPham.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_timKiemSanPham.Location = new System.Drawing.Point(578, 614);
+            this.btn_timKiemSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btn_timKiemSanPham.Image")));
+            this.btn_timKiemSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_timKiemSanPham.Location = new System.Drawing.Point(578, 624);
             this.btn_timKiemSanPham.Name = "btn_timKiemSanPham";
-            this.btn_timKiemSanPham.Size = new System.Drawing.Size(173, 64);
+            this.btn_timKiemSanPham.Size = new System.Drawing.Size(143, 46);
             this.btn_timKiemSanPham.TabIndex = 49;
             this.btn_timKiemSanPham.Text = "Tìm Kiếm";
+            this.btn_timKiemSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_timKiemSanPham.UseVisualStyleBackColor = true;
             this.btn_timKiemSanPham.Click += new System.EventHandler(this.btn_timKiemSanPham_Click);
             // 
@@ -224,6 +228,7 @@
             this.txt_timKiemSanPham.Name = "txt_timKiemSanPham";
             this.txt_timKiemSanPham.Size = new System.Drawing.Size(282, 46);
             this.txt_timKiemSanPham.TabIndex = 48;
+            this.txt_timKiemSanPham.TextChanged += new System.EventHandler(this.txt_timKiemSanPham_TextChanged);
             // 
             // dgv_SanPham
             // 
@@ -243,71 +248,92 @@
             // 
             // btn_dongSanPham
             // 
+            this.btn_dongSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btn_dongSanPham.Image")));
+            this.btn_dongSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_dongSanPham.Location = new System.Drawing.Point(1009, 704);
             this.btn_dongSanPham.Name = "btn_dongSanPham";
             this.btn_dongSanPham.Size = new System.Drawing.Size(104, 49);
             this.btn_dongSanPham.TabIndex = 75;
             this.btn_dongSanPham.Text = "Đóng";
+            this.btn_dongSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_dongSanPham.UseVisualStyleBackColor = true;
             this.btn_dongSanPham.Click += new System.EventHandler(this.btn_dongSanPham_Click);
             // 
             // btn_danhSachSanPham
             // 
+            this.btn_danhSachSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btn_danhSachSanPham.Image")));
+            this.btn_danhSachSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_danhSachSanPham.Location = new System.Drawing.Point(820, 704);
             this.btn_danhSachSanPham.Name = "btn_danhSachSanPham";
             this.btn_danhSachSanPham.Size = new System.Drawing.Size(147, 49);
             this.btn_danhSachSanPham.TabIndex = 74;
             this.btn_danhSachSanPham.Text = "Danh Sách";
+            this.btn_danhSachSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_danhSachSanPham.UseVisualStyleBackColor = true;
             this.btn_danhSachSanPham.Click += new System.EventHandler(this.btn_danhSachSanPham_Click);
             // 
             // btn_boQuaSanPham
             // 
+            this.btn_boQuaSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btn_boQuaSanPham.Image")));
+            this.btn_boQuaSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_boQuaSanPham.Location = new System.Drawing.Point(654, 704);
             this.btn_boQuaSanPham.Name = "btn_boQuaSanPham";
             this.btn_boQuaSanPham.Size = new System.Drawing.Size(124, 49);
             this.btn_boQuaSanPham.TabIndex = 73;
             this.btn_boQuaSanPham.Text = "Bỏ Qua";
+            this.btn_boQuaSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_boQuaSanPham.UseVisualStyleBackColor = true;
             this.btn_boQuaSanPham.Click += new System.EventHandler(this.btn_boQuaSanPham_Click);
             // 
             // btn_luuSanPham
             // 
+            this.btn_luuSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btn_luuSanPham.Image")));
+            this.btn_luuSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_luuSanPham.Location = new System.Drawing.Point(492, 704);
             this.btn_luuSanPham.Name = "btn_luuSanPham";
             this.btn_luuSanPham.Size = new System.Drawing.Size(120, 49);
             this.btn_luuSanPham.TabIndex = 72;
             this.btn_luuSanPham.Text = "Lưu";
+            this.btn_luuSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_luuSanPham.UseVisualStyleBackColor = true;
             this.btn_luuSanPham.Click += new System.EventHandler(this.btn_luuSanPham_Click);
             // 
             // btn_suaSanPham
             // 
+            this.btn_suaSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btn_suaSanPham.Image")));
+            this.btn_suaSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_suaSanPham.Location = new System.Drawing.Point(339, 704);
             this.btn_suaSanPham.Name = "btn_suaSanPham";
             this.btn_suaSanPham.Size = new System.Drawing.Size(111, 49);
             this.btn_suaSanPham.TabIndex = 71;
             this.btn_suaSanPham.Text = "Sửa";
+            this.btn_suaSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_suaSanPham.UseVisualStyleBackColor = true;
             this.btn_suaSanPham.Click += new System.EventHandler(this.btn_suaSanPham_Click);
             // 
             // btn_xoaSanPham
             // 
-            this.btn_xoaSanPham.Location = new System.Drawing.Point(183, 704);
+            this.btn_xoaSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btn_xoaSanPham.Image")));
+            this.btn_xoaSanPham.Location = new System.Drawing.Point(188, 704);
             this.btn_xoaSanPham.Name = "btn_xoaSanPham";
-            this.btn_xoaSanPham.Size = new System.Drawing.Size(114, 49);
+            this.btn_xoaSanPham.Size = new System.Drawing.Size(109, 49);
             this.btn_xoaSanPham.TabIndex = 70;
             this.btn_xoaSanPham.Text = "Xoá";
+            this.btn_xoaSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_xoaSanPham.UseVisualStyleBackColor = true;
             this.btn_xoaSanPham.Click += new System.EventHandler(this.btn_xoaSanPham_Click);
             // 
             // btn_themSanPham
             // 
-            this.btn_themSanPham.Location = new System.Drawing.Point(30, 704);
+            this.btn_themSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_themSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btn_themSanPham.Image")));
+            this.btn_themSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_themSanPham.Location = new System.Drawing.Point(48, 704);
             this.btn_themSanPham.Name = "btn_themSanPham";
-            this.btn_themSanPham.Size = new System.Drawing.Size(111, 49);
+            this.btn_themSanPham.Size = new System.Drawing.Size(93, 49);
             this.btn_themSanPham.TabIndex = 69;
             this.btn_themSanPham.Text = "Thêm";
+            this.btn_themSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_themSanPham.UseVisualStyleBackColor = true;
             this.btn_themSanPham.Click += new System.EventHandler(this.btn_themSanPham_Click);
             // 

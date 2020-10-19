@@ -54,61 +54,75 @@ namespace DuAnMau
         }
         private void btn_moHinh_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFile = new OpenFileDialog();
-            openFile.Filter = "Bitmap(*.bmp)|*.bmp|JPEG(*.jpg)|*.jpg|GIF(*.gif)|*.gif|All files(*.*)|*.*";
-            openFile.FilterIndex = 2;
-            openFile.Title = "Chọn Hình Ảnh Minh Hoạ Sản Phẩm";
-            if (openFile.ShowDialog() == DialogResult.OK)
+            try
             {
-                fileAddress = openFile.FileName;
-                pic_SanPham.Image = Image.FromFile(fileAddress);
-                fileName = Path.GetFileName(openFile.FileName);
-                string saveDirectory = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
-                fileSavePath = saveDirectory + "\\Images\\" + fileName;
-                txt_hinh.Text = "\\Images\\" + fileName;
+                OpenFileDialog openFile = new OpenFileDialog();
+                openFile.Filter = "Bitmap(*.bmp)|*.bmp|JPEG(*.jpg)|*.jpg|GIF(*.gif)|*.gif|All files(*.*)|*.*";
+                openFile.FilterIndex = 2;
+                openFile.Title = "Chọn Hình Ảnh Minh Hoạ Sản Phẩm";
+                if (openFile.ShowDialog() == DialogResult.OK)
+                {
+                    fileAddress = openFile.FileName;
+                    pic_SanPham.Image = Image.FromFile(fileAddress);
+                    fileName = Path.GetFileName(openFile.FileName);
+                    string saveDirectory = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                    fileSavePath = saveDirectory + "\\Images\\" + fileName;
+                    txt_hinh.Text = "\\Images\\" + fileName;
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
         }
 
         private void btn_luuSanPham_Click(object sender, EventArgs e)
         {
-            int intSoLuong;
-            float floatDonGiaNhap;
-            float floatDonGiaBan;
-            bool isInt = int.TryParse(txt_soLuongHang.Text.Trim().ToString(), out intSoLuong);
-            bool isFloatNhap = float.TryParse(txt_giaNhap.Text.Trim().ToString(), out floatDonGiaNhap);
-            bool isFloatBan = float.TryParse(txt_giaBan.Text.Trim().ToString(), out floatDonGiaBan);
-            if (txt_tenHang.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Tên Hàng Không Được Bỏ Trống");
-            }
-            else if (int.Parse(txt_giaNhap.Text) < 0 || !isFloatNhap)
-            {
-                MessageBox.Show("Giá Nhập Không Được Âm");
-            }
-            else if (int.Parse(txt_giaBan.Text) < 0 || !isFloatBan)
-            {
-                MessageBox.Show("Giá Bán Không Được Âm");
-            }
-            else if (txt_hinh.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn Phải Upload Hình");
-                btn_moHinh.Focus();
-                return;
-            }
-            else
-            {
-                DTO_HANG hang = new DTO_HANG(txt_tenHang.Text, int.Parse(txt_soLuongHang.Text), float.Parse(txt_giaNhap.Text), float.Parse(txt_giaBan.Text), "\\Images\\" + fileName, txt_ghiChu.Text, cache.mail);
-                if (BUS_HANG.insertHang(hang))
-                {   
-                    MessageBox.Show("Thêm Sản Phẩm Thành Công");
-                    File.Copy(fileAddress, fileSavePath, true);
-                    ResetValue();
-                    LoadGridViewSanPham();
+            try {
+                int intSoLuong;
+                float floatDonGiaNhap;
+                float floatDonGiaBan;
+                bool isInt = int.TryParse(txt_soLuongHang.Text.Trim().ToString(), out intSoLuong);
+                bool isFloatNhap = float.TryParse(txt_giaNhap.Text.Trim().ToString(), out floatDonGiaNhap);
+                bool isFloatBan = float.TryParse(txt_giaBan.Text.Trim().ToString(), out floatDonGiaBan);
+                if (txt_tenHang.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Tên Hàng Không Được Bỏ Trống");
+                }
+                else if (int.Parse(txt_giaNhap.Text) < 0 || !isFloatNhap)
+                {
+                    MessageBox.Show("Giá Nhập Không Được Âm");
+                }
+                else if (int.Parse(txt_giaBan.Text) < 0 || !isFloatBan)
+                {
+                    MessageBox.Show("Giá Bán Không Được Âm");
+                }
+                else if (txt_hinh.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Bạn Phải Upload Hình");
+                    btn_moHinh.Focus();
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("Thêm Sản Phẩm Không Thành Công");
+                    DTO_HANG hang = new DTO_HANG(txt_tenHang.Text, int.Parse(txt_soLuongHang.Text), float.Parse(txt_giaNhap.Text), float.Parse(txt_giaBan.Text), "\\Images\\" + fileName, txt_ghiChu.Text, cache.mail);
+                    if (BUS_HANG.insertHang(hang))
+                    {
+                        MessageBox.Show("Thêm Sản Phẩm Thành Công");
+                        File.Copy(fileAddress, fileSavePath, true);
+                        ResetValue();
+                        LoadGridViewSanPham();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm Sản Phẩm Không Thành Công");
+                    }
                 }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -175,55 +189,68 @@ namespace DuAnMau
 
         private void dgv_SanPham_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string saveDirectory = Application.StartupPath.Substring(0, Application.StartupPath.Length - 10);
-            if (dgv_SanPham.Rows.Count>1)
-            {
-                btn_moHinh.Enabled = true;
-                btn_luuSanPham.Enabled = false;
-                txt_tenHang.Enabled = true;
-                txt_soLuongHang.Enabled = true;
-                txt_giaNhap.Enabled = true; 
-                txt_giaBan.Enabled = true; 
-                txt_ghiChu.Enabled = true;
-                btn_suaSanPham.Enabled = true;
-                btn_xoaSanPham.Enabled = true;
-                txt_tenHang.Focus();
-                txt_maHang.Text = dgv_SanPham.CurrentRow.Cells[0].Value.ToString();
-                txt_tenHang.Text = dgv_SanPham.CurrentRow.Cells[1].Value.ToString();
-                txt_soLuongHang.Text = dgv_SanPham.CurrentRow.Cells[2].Value.ToString();
-                txt_giaNhap.Text = dgv_SanPham.CurrentRow.Cells[3].Value.ToString();
-                txt_giaBan.Text = dgv_SanPham.CurrentRow.Cells[4].Value.ToString();
-                txt_hinh.Text = dgv_SanPham.CurrentRow.Cells[5].Value.ToString();
-                txt_ghiChu.Text = dgv_SanPham.CurrentRow.Cells[6].Value.ToString();
-                checkUrlImages = txt_hinh.Text;
-                pic_SanPham.Image = Image.FromFile(saveDirectory + dgv_SanPham.CurrentRow.Cells[5].Value.ToString());
+            try {
+                string saveDirectory = Application.StartupPath.Substring(0, Application.StartupPath.Length - 10);
+                if (dgv_SanPham.Rows.Count > 1)
+                {
+                    btn_moHinh.Enabled = true;
+                    btn_luuSanPham.Enabled = false;
+                    txt_tenHang.Enabled = true;
+                    txt_soLuongHang.Enabled = true;
+                    txt_giaNhap.Enabled = true;
+                    txt_giaBan.Enabled = true;
+                    txt_ghiChu.Enabled = true;
+                    btn_suaSanPham.Enabled = true;
+                    btn_xoaSanPham.Enabled = true;
+                    txt_tenHang.Focus();
+                    txt_maHang.Text = dgv_SanPham.CurrentRow.Cells[0].Value.ToString();
+                    txt_tenHang.Text = dgv_SanPham.CurrentRow.Cells[1].Value.ToString();
+                    txt_soLuongHang.Text = dgv_SanPham.CurrentRow.Cells[2].Value.ToString();
+                    txt_giaNhap.Text = dgv_SanPham.CurrentRow.Cells[3].Value.ToString();
+                    txt_giaBan.Text = dgv_SanPham.CurrentRow.Cells[4].Value.ToString();
+                    txt_hinh.Text = dgv_SanPham.CurrentRow.Cells[5].Value.ToString();
+                    txt_ghiChu.Text = dgv_SanPham.CurrentRow.Cells[6].Value.ToString();
+                    checkUrlImages = txt_hinh.Text;
+                    pic_SanPham.Image = Image.FromFile(saveDirectory + dgv_SanPham.CurrentRow.Cells[5].Value.ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Bảng Không Có Dữ Liệu");
+                }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Bảng Không Có Dữ Liệu");
+                MessageBox.Show(ex.Message);
             }
+            
         }
 
         private void btn_xoaSanPham_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn Có Chắc Muốn Xoá Sản Phẩm Này", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                if (BUS_HANG.deleteHang(int.Parse(txt_maHang.Text)))
+            try {
+                if (MessageBox.Show("Bạn Có Chắc Muốn Xoá Sản Phẩm Này", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xoá Dữ Liệu Thành Công");
-                    ResetValue();
-                    LoadGridViewSanPham();
+                    if (BUS_HANG.deleteHang(int.Parse(txt_maHang.Text)))
+                    {
+                        MessageBox.Show("Xoá Dữ Liệu Thành Công");
+                        ResetValue();
+                        LoadGridViewSanPham();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xoá Dữ Liệu Không Thành Công");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Xoá Dữ Liệu Không Thành Công");
+                    ResetValue();
+                    LoadGridViewSanPham();
                 }
-            }
-            else
+            } catch (Exception ex)
             {
-                ResetValue();
-                LoadGridViewSanPham();
+                MessageBox.Show(ex.Message);
             }
+           
         }
 
         private void btn_dongSanPham_Click(object sender, EventArgs e)
@@ -263,8 +290,9 @@ namespace DuAnMau
             {
                 MessageBox.Show("Không Tìm Thấy Kết Quả");
             }
-            txt_timKiemSanPham.Text = "Nhập Tên Nhân Viên";
+            txt_timKiemSanPham.Text = "Nhập Tên SanPham";
             txt_timKiemSanPham.BackColor = Color.White;
+            ResetValue();
         }
 
         private void btn_boQuaSanPham_Click(object sender, EventArgs e)
@@ -288,6 +316,11 @@ namespace DuAnMau
         private void dgv_SanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txt_timKiemSanPham_TextChanged(object sender, EventArgs e)
+        {
+            txt_timKiemSanPham.Text = null;
         }
     }
 }
