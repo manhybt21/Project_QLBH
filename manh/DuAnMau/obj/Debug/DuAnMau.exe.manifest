@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>H+ySWN38iuYI01jgTs54kz5kRr14W0xFXuTS2eE3EUw=</dsig:DigestValue>
+        <dsig:DigestValue>X6n0LCCuDQfvVZ7ewegj34irP956aJzZGe/n1UOB2RI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+0uXDVyjrNVScBwTvnAafj1zHhsEkl5OeN1q5IF8tTk=</dsig:DigestValue>
+        <dsig:DigestValue>JFBqKO3swhAnfG1srQywI79YGRlj8Z3akyzLy9K6cZE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DuAnMau.exe" size="224224">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DuAnMau.exe" size="223200">
       <assemblyIdentity name="DuAnMau" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/hbORwPIKypJxh6fQaghGxwky6AZSNJUSgzCBWqF8do=</dsig:DigestValue>
+        <dsig:DigestValue>cwYEnO9b8zlLz9y80mq0tjvrSRkBaiSOEBiP4f0Gy2w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -114,7 +114,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>WQVI6dvwHY55EVOus1DTnST7Vgnre6mq+5JgzdjLwRw=</dsig:DigestValue>
+      <dsig:DigestValue>GqCO0Gg0f5HpJMQNzxIwBGrgHY/MOjN0kZd0pVVAj9U=</dsig:DigestValue>
     </hash>
   </file>
   <file name="QLBanHang_log.ldf" size="8388608" writeableType="applicationData">
@@ -123,7 +123,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>EyXSJ074DjJPpRb1ng5q3jImtNvbfH5TVPoSihEmJ0w=</dsig:DigestValue>
+      <dsig:DigestValue>LuedVmoIpJfLKxwe0Gv80Jg6QvRgzdI2eq3Pl9/N2Qs=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

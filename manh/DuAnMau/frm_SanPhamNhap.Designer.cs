@@ -50,6 +50,7 @@
             this.Controls.Add(this.dgv_SanPhamNhap);
             this.Name = "frm_SanPhamNhap";
             this.Text = "frm_SanPhamNhap";
+            this.Load += new System.EventHandler(this.frm_SanPhamNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SanPhamNhap)).EndInit();
             this.ResumeLayout(false);
 
