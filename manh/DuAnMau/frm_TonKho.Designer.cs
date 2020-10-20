@@ -50,6 +50,7 @@
             this.Controls.Add(this.dgv_TonKho);
             this.Name = "frm_TonKho";
             this.Text = "frm_TonKho";
+            this.Load += new System.EventHandler(this.frm_TonKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TonKho)).EndInit();
             this.ResumeLayout(false);
 

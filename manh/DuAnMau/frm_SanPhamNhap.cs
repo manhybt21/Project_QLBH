@@ -16,5 +16,15 @@ namespace DuAnMau
         {
             InitializeComponent();
         }
+
+        public void LoadGridView()
+        {
+            dgv_SanPhamNhap.DataSource = BUS.BUS_HANG.ThongKeHang();
+        }
+
+        private void frm_SanPhamNhap_Load(object sender, EventArgs e)
+        {
+            LoadGridView();
+        }
     }
 }
