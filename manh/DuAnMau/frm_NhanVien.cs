@@ -278,6 +278,11 @@ namespace DuAnMau
         {
             try
             {
+                if (txt_emailNhanVien.Text==cache.mail)
+                {
+                    MessageBox.Show("Bạn không thể xoá chính mình!");
+                    return;
+                }
                 string email = txt_emailNhanVien.Text;
                 if (MessageBox.Show("Bạn Có Chắc Muốn Xoá Nhân Viên Này", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {

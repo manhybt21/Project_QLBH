@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>X6n0LCCuDQfvVZ7ewegj34irP956aJzZGe/n1UOB2RI=</dsig:DigestValue>
+        <dsig:DigestValue>H+ySWN38iuYI01jgTs54kz5kRr14W0xFXuTS2eE3EUw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JFBqKO3swhAnfG1srQywI79YGRlj8Z3akyzLy9K6cZE=</dsig:DigestValue>
+        <dsig:DigestValue>+0uXDVyjrNVScBwTvnAafj1zHhsEkl5OeN1q5IF8tTk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DuAnMau.exe" size="223200">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DuAnMau.exe" size="224224">
       <assemblyIdentity name="DuAnMau" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>436kfNF6kfP01XYJICjQW61tSKy7NM7/jNPWplNY6/A=</dsig:DigestValue>
+        <dsig:DigestValue>/hbORwPIKypJxh6fQaghGxwky6AZSNJUSgzCBWqF8do=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -16,3 +16,12 @@ C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DAL\obj\Debug\DAL.csproj.Co
 C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DAL\obj\Debug\DAL.dll
 C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DAL\obj\Debug\DAL.pdb
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DAL\bin\Debug\DAL.dll
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DAL\bin\Debug\DAL.pdb
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DAL\bin\Debug\DTO.dll
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DAL\bin\Debug\DTO.pdb
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DAL\obj\Debug\DAL.dll
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DAL\obj\Debug\DAL.pdb
