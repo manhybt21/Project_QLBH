@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SvQfEaZciskKwWvPeKPUkTThDLMY8hEwJOyDNdndM24=</dsig:DigestValue>
+        <dsig:DigestValue>cwYEnO9b8zlLz9y80mq0tjvrSRkBaiSOEBiP4f0Gy2w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -114,7 +114,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Pifj9Xl+f1RdVpatS9qA/MqC9NhNu/vxgvHbwdNspo0=</dsig:DigestValue>
+      <dsig:DigestValue>GqCO0Gg0f5HpJMQNzxIwBGrgHY/MOjN0kZd0pVVAj9U=</dsig:DigestValue>
     </hash>
   </file>
   <file name="QLBanHang_log.ldf" size="8388608" writeableType="applicationData">
@@ -123,7 +123,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>mf5Q50TWMiO3L+TbTDsz5njjzD+gn6a1vy+nZlb4DHI=</dsig:DigestValue>
+      <dsig:DigestValue>LuedVmoIpJfLKxwe0Gv80Jg6QvRgzdI2eq3Pl9/N2Qs=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

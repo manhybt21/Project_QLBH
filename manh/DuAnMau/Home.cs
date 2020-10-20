@@ -136,7 +136,6 @@ namespace DuAnMau
             tk = new frm_ThongKe();
             if (!CheckExitsFrom("frm_ThongKe"))
             {
-                tk.MdiParent = this;
                 tk.Show();
             }
             else
