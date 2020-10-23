@@ -214,7 +214,7 @@
             this.btn_timKiemSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_timKiemSanPham.Location = new System.Drawing.Point(578, 624);
             this.btn_timKiemSanPham.Name = "btn_timKiemSanPham";
-            this.btn_timKiemSanPham.Size = new System.Drawing.Size(143, 46);
+            this.btn_timKiemSanPham.Size = new System.Drawing.Size(158, 46);
             this.btn_timKiemSanPham.TabIndex = 49;
             this.btn_timKiemSanPham.Text = "Tìm Kiếm";
             this.btn_timKiemSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -228,7 +228,7 @@
             this.txt_timKiemSanPham.Name = "txt_timKiemSanPham";
             this.txt_timKiemSanPham.Size = new System.Drawing.Size(282, 46);
             this.txt_timKiemSanPham.TabIndex = 48;
-            this.txt_timKiemSanPham.TextChanged += new System.EventHandler(this.txt_timKiemSanPham_TextChanged);
+            this.txt_timKiemSanPham.Click += new System.EventHandler(this.txt_timKiemSanPham_Click);
             // 
             // dgv_SanPham
             // 
@@ -252,7 +252,7 @@
             this.btn_dongSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_dongSanPham.Location = new System.Drawing.Point(1009, 704);
             this.btn_dongSanPham.Name = "btn_dongSanPham";
-            this.btn_dongSanPham.Size = new System.Drawing.Size(104, 49);
+            this.btn_dongSanPham.Size = new System.Drawing.Size(108, 49);
             this.btn_dongSanPham.TabIndex = 75;
             this.btn_dongSanPham.Text = "Đóng";
             this.btn_dongSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -265,7 +265,7 @@
             this.btn_danhSachSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_danhSachSanPham.Location = new System.Drawing.Point(820, 704);
             this.btn_danhSachSanPham.Name = "btn_danhSachSanPham";
-            this.btn_danhSachSanPham.Size = new System.Drawing.Size(147, 49);
+            this.btn_danhSachSanPham.Size = new System.Drawing.Size(152, 49);
             this.btn_danhSachSanPham.TabIndex = 74;
             this.btn_danhSachSanPham.Text = "Danh Sách";
             this.btn_danhSachSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -314,6 +314,7 @@
             // btn_xoaSanPham
             // 
             this.btn_xoaSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btn_xoaSanPham.Image")));
+            this.btn_xoaSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_xoaSanPham.Location = new System.Drawing.Point(188, 704);
             this.btn_xoaSanPham.Name = "btn_xoaSanPham";
             this.btn_xoaSanPham.Size = new System.Drawing.Size(109, 49);
@@ -325,12 +326,12 @@
             // 
             // btn_themSanPham
             // 
-            this.btn_themSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_themSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_themSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btn_themSanPham.Image")));
             this.btn_themSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_themSanPham.Location = new System.Drawing.Point(48, 704);
+            this.btn_themSanPham.Location = new System.Drawing.Point(57, 704);
             this.btn_themSanPham.Name = "btn_themSanPham";
-            this.btn_themSanPham.Size = new System.Drawing.Size(93, 49);
+            this.btn_themSanPham.Size = new System.Drawing.Size(105, 49);
             this.btn_themSanPham.TabIndex = 69;
             this.btn_themSanPham.Text = "Thêm";
             this.btn_themSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

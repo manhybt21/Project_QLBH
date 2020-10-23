@@ -318,7 +318,7 @@ namespace DuAnMau
 
         }
 
-        private void txt_timKiemSanPham_TextChanged(object sender, EventArgs e)
+        private void txt_timKiemSanPham_Click(object sender, EventArgs e)
         {
             txt_timKiemSanPham.Text = null;
         }
