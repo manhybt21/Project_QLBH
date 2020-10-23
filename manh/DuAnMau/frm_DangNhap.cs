@@ -65,7 +65,7 @@ namespace DuAnMau
             }
         }
 
-        private void btn_DangNhap_Click(object sender, EventArgs e)
+        public void btn_DangNhap_Click(object sender, EventArgs e)
         {
             if (txt_EmailDangNhap.Text == "" || txt_MatKhauDangNhap.Text == "")
             {

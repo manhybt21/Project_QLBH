@@ -20,3 +20,14 @@ C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\BUS\obj\Debug\BUS.csproj.CoreC
 C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\BUS\obj\Debug\BUS.dll
 C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\BUS\obj\Debug\BUS.pdb
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\BUS\bin\Debug\BUS.dll
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\BUS\bin\Debug\BUS.pdb
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\BUS\bin\Debug\DAL.dll
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\BUS\bin\Debug\DTO.dll
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\BUS\bin\Debug\DAL.pdb
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\BUS\bin\Debug\DTO.pdb
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\BUS\obj\Debug\BUS.dll
+C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\BUS\obj\Debug\BUS.pdb
