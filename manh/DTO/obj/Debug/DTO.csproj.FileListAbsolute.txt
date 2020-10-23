@@ -4,9 +4,8 @@ D:\dự án mẫu\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
 D:\dự án mẫu\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\dự án mẫu\DTO\obj\Debug\DTO.dll
 D:\dự án mẫu\DTO\obj\Debug\DTO.pdb
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DTO\bin\Debug\DTO.dll
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DTO\bin\Debug\DTO.pdb
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DTO\obj\Debug\DTO.dll
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DTO\obj\Debug\DTO.pdb
+C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DTO\bin\Debug\DTO.dll
+C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DTO\bin\Debug\DTO.pdb
+C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DTO\obj\Debug\DTO.dll
+C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DTO\obj\Debug\DTO.pdb
