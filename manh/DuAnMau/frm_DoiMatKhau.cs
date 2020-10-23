@@ -23,25 +23,47 @@ namespace DuAnMau
         BUS_NHANVIEN bus_NHANVIEN = new BUS_NHANVIEN();
         private void btn_doiMatKhau_Click(object sender, EventArgs e)
         {
-            if (txt_MatKhauCu.Text.Trim().Length == 0)
+            if (txt_MatKhauCu.Text == "")
             {
-                MessageBox.Show("bạn phải nhập mật khẩu cũ để thay đổi mạt khẩu");
-                txt_MatKhauCu.Focus();
+                MessageBox.Show("Mật khẩu cũ không được để trống!");
                 return;
             }
-            string matKhauMoi = bus_NHANVIEN.encryption(txt_matKhauMoi.Text);
-            string matKhauCu = bus_NHANVIEN.encryption(txt_MatKhauCu.Text);
+            DTO_NHANVIEN nv = new DTO_NHANVIEN();
+            nv.Email = txt_EmailNhanVien.Text;
+            nv.matKhau = txt_MatKhauCu.Text;
+            if (!BUS.BUS_NHANVIEN.DangNhap(nv))
+            {
+                MessageBox.Show("Đổi mật khẩu không thành công! Mật khẩu cũ sai!");
+                return;
+            }
+            string matKhauMoi = BUS_NHANVIEN.encryption(txt_matKhauMoi.Text);
+            string matKhauCu = BUS_NHANVIEN.encryption(txt_MatKhauCu.Text);
+            if (txt_matKhauMoi.Text == "" || txt_nhapLaiMatKhauMoi.Text == "")
+            {
+                MessageBox.Show("Không được để trống!");
+                return;
+            }
+            if (txt_matKhauMoi.Text.Length < 6 || txt_nhapLaiMatKhauMoi.Text.Length <6)
+            {
+                MessageBox.Show("Độ dài của mâ khẩu phải lớn hơn hoặc bằng 6 ký tự");
+                return;
+            }
+            if (txt_matKhauMoi.Text != txt_nhapLaiMatKhauMoi.Text)
+            {
+                MessageBox.Show("Mật khẩu mới không trùng khớp");
+                return;
+            }
             if (BUS_NHANVIEN.DoimatKhau(txt_EmailNhanVien.Text, matKhauCu, matKhauMoi))
             {
                 cache.profile = 1;
                 cache.session = 0;
                 sendMail(txt_EmailNhanVien.Text, txt_nhapLaiMatKhauMoi.Text);
-                MessageBox.Show("đổi mật khẩu thành công vui lòng đăng nhập lại để thực hiện chức năng");
-                this.Close();
+                MessageBox.Show("Đổi mật khẩu thành công vui lòng đăng nhập lại để thực hiện chức năng!");
+                return;
             }
             else
             {
-                MessageBox.Show("đổi mật khẩu khong thành công vui lòng đăng nhập lại để thực hiện chức năng");
+                MessageBox.Show("Đổi mật khẩu không thành công!");
             }
         }
         public void sendMail(string email, string matKhau)

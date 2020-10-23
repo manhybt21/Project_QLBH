@@ -77,9 +77,14 @@ namespace DuAnMau
                 MessageBox.Show("Email không đúng định dạng!");
                 return;
             }
+            if (txt_MatKhauDangNhap.Text.Length < 6)
+            {
+                MessageBox.Show("Mật khẩu phải dài hơn hoặc bằng 6 kỹ tự!");
+                return;
+            }
             DTO_NHANVIEN nv = new DTO_NHANVIEN();
             nv.Email = txt_EmailDangNhap.Text.ToLower();
-            nv.matKhau = bus_NHANVIEN.encryption(txt_MatKhauDangNhap.Text);
+            nv.matKhau = txt_MatKhauDangNhap.Text.ToLower();
             if (BUS_NHANVIEN.DangNhap(nv))
             {
                 string mail = nv.Email;
@@ -123,7 +128,7 @@ namespace DuAnMau
                     builder.Append(RandomNumber(1000, 9990));
                     builder.Append(RandomString(2, false));
                     MessageBox.Show(builder.ToString());
-                    string matkhaumoi = bus_NHANVIEN.encryption(builder.ToString());
+                    string matkhaumoi = BUS_NHANVIEN.encryption(builder.ToString());
                     BUS_NHANVIEN.TaoMatKhauMoi(txt_EmailDangNhap.Text, matkhaumoi);
                     SendMail(txt_EmailDangNhap.Text, matkhaumoi);
                 }

@@ -16,7 +16,7 @@ namespace BUS
         /// </summary>
         /// <param name="password"></param>
         /// <returns></returns>
-        public string encryption(string password)
+        public static string encryption(string password)
         {
             MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
             byte[] encrypt;
@@ -36,6 +36,7 @@ namespace BUS
         /// <returns></returns>
         public static bool DangNhap(DTO_NHANVIEN nv)
         {
+            nv.matKhau = encryption(nv.matKhau);
             return DAL_NHANVIEN.DangNhap(nv);
         }
         /// <summary>

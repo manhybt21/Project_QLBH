@@ -55,7 +55,7 @@ namespace DuAnMau
             nhânViênToolStripMenuItem.Visible = false;
             thốngKêToolStripMenuItem.Visible = false;
         }
-        private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
@@ -63,19 +63,18 @@ namespace DuAnMau
                 if (!CheckExitsFrom("frm_DangNhap"))
                 {
                     dn.MdiParent = this;
-                    dn.Show();
                     dn.FormClosed += new FormClosedEventHandler(FrmDangNhap_FromClose);
+                    dn.Show();
                 }
                 else
                 {
                     ActiveChildFrom("frm_DangNhap");
                 }
             }
-            catch(Exception x)
+            catch (Exception x)
             {
                 MessageBox.Show(x.Message);
             }
-            
         }
         private void resetValue()
         {
@@ -103,7 +102,7 @@ namespace DuAnMau
                 thốngKêToolStripMenuItem.Enabled = false;
                 đăngNhậpToolStripMenuItem.Enabled = true;
             }
-        } 
+        }
         private void hướngDẫnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //try {
@@ -143,10 +142,14 @@ namespace DuAnMau
             }
         }
 
-        public void FrmDangNhap_FromClose(object sender,FormClosedEventArgs e)
+        public void FrmDangNhap_FromClose(object sender, FormClosedEventArgs e)
         {
             this.Refresh();
             Home_Load(sender, e);
+            if (cache.session==1)
+            {
+                quênMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
+            }
         }
         private void Home_Load(object sender, EventArgs e)
         {
@@ -158,7 +161,7 @@ namespace DuAnMau
             }
         }
 
-        
+
         private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             sp = new frm_SanPham();
@@ -202,16 +205,16 @@ namespace DuAnMau
         }
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-            if(MessageBox.Show("bạn có muốn thoát không", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Information)== DialogResult.Yes)
-            Application.Exit();
+
+            if (MessageBox.Show("bạn có muốn thoát không", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                Application.Exit();
         }
 
         private void proFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!CheckExitsFrom("frm_DoiMatKhau"))
-            { 
-            //    frm_DoiMatKhau profileNv = new frm_DoiMatKhau(dn.email);
+            {
+                //    frm_DoiMatKhau profileNv = new frm_DoiMatKhau(dn.email);
             }
         }
     }
