@@ -15,6 +15,7 @@ namespace DuAnMau
         public frm_SanPhamNhap()
         {
             InitializeComponent();
+            LoadGridView();
         }
 
         public void LoadGridView()

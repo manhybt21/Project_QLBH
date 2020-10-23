@@ -30,3 +30,4 @@ C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.a
 C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.exe
 C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.pdb
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_quenMatKhau.resources

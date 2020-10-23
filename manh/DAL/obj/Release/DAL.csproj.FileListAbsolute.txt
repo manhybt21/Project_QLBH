@@ -7,3 +7,11 @@ D:\dự án mẫu\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
 D:\dự án mẫu\DAL\obj\Release\DAL.csproj.CopyComplete
 D:\dự án mẫu\DAL\obj\Release\DAL.dll
 D:\dự án mẫu\DAL\obj\Release\DAL.pdb
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DAL\bin\Release\DAL.dll
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DAL\bin\Release\DAL.pdb
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DAL\bin\Release\DTO.dll
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DAL\bin\Release\DTO.pdb
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DAL\obj\Release\DAL.csproj.CopyComplete
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DAL\obj\Release\DAL.dll
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DAL\obj\Release\DAL.pdb

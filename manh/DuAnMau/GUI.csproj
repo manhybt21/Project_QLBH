@@ -70,6 +70,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -106,6 +108,12 @@
     </Compile>
     <Compile Include="frm_NhanVien.Designer.cs">
       <DependentUpon>frm_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_quenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_quenMatKhau.Designer.cs">
+      <DependentUpon>frm_quenMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_SanPham.cs">
       <SubType>Form</SubType>
@@ -151,6 +159,9 @@
     <EmbeddedResource Include="frm_NhanVien.resx">
       <DependentUpon>frm_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_quenMatKhau.resx">
+      <DependentUpon>frm_quenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_SanPham.resx">
       <DependentUpon>frm_SanPham.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +185,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="DuAnMau_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
@@ -209,17 +221,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon app.ico" />
+    <None Include="icon\FontAwesome_f0b1%283%29_48.png" />
+    <None Include="icon\FontAwesome_f0ca%281%29_48.png" />
+    <None Include="icon\FontAwesome_f080%288%29_48.png" />
+    <None Include="icon\FontAwesome_f0ad%283%29_48.png" />
+    <None Include="icon\FontAwesome_f007%284%29_48.png" />
+    <None Include="icon\FontAwesome_f0c0%285%29_48.png" />
+    <None Include="icon\FontAwesome_f009%289%29_48.png" />
+    <None Include="icon\tải xuống.jpg" />
+    <None Include="icon\tải xuống %281%29.jpg" />
+    <None Include="icon\ong vàng.jpg" />
     <Content Include="QLBanHang.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="QLBanHang_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>QLBanHang.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Doc\" />
-    <Folder Include="icon\" />
     <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
