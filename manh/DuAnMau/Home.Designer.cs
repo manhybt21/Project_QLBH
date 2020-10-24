@@ -33,8 +33,7 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quênMậtKhẩuStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HeThong_MatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,8 +78,7 @@
             // 
             this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.đăngNhậpToolStripMenuItem,
-            this.đổiMậtKhẩuToolStripMenuItem,
-            this.quênMậtKhẩuStripMenuItem,
+            this.HeThong_MatKhau,
             this.thoátToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Image = global::DuAnMau.Properties.Resources.FontAwesome_f0b1_3__48;
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
@@ -93,33 +91,25 @@
             this.đăngNhậpToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
             this.đăngNhậpToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(302, 34);
+            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(297, 34);
             this.đăngNhậpToolStripMenuItem.Text = "Đăng Nhập";
             this.đăngNhậpToolStripMenuItem.Click += new System.EventHandler(this.đăngNhậpToolStripMenuItem_Click);
             // 
-            // đổiMậtKhẩuToolStripMenuItem
+            // HeThong_MatKhau
             // 
-            this.đổiMậtKhẩuToolStripMenuItem.Image = global::DuAnMau.Properties.Resources.tải_xuống;
-            this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K)));
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(302, 34);
-            this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi Mật Khẩu";
-            this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
-            // 
-            // quênMậtKhẩuStripMenuItem
-            // 
-            this.quênMậtKhẩuStripMenuItem.Name = "quênMậtKhẩuStripMenuItem";
-            this.quênMậtKhẩuStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.quênMậtKhẩuStripMenuItem.Size = new System.Drawing.Size(302, 34);
-            this.quênMậtKhẩuStripMenuItem.Text = "Quên Mật Khẩu";
-            this.quênMậtKhẩuStripMenuItem.Click += new System.EventHandler(this.quênMậtKhẩuStripMenuItem_Click);
+            this.HeThong_MatKhau.Image = global::DuAnMau.Properties.Resources.tải_xuống;
+            this.HeThong_MatKhau.Name = "HeThong_MatKhau";
+            this.HeThong_MatKhau.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K)));
+            this.HeThong_MatKhau.Size = new System.Drawing.Size(297, 34);
+            this.HeThong_MatKhau.Text = "Quên mật khẩu";
+            this.HeThong_MatKhau.Click += new System.EventHandler(this.HeThong_MatKhauClick);
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("thoátToolStripMenuItem.Image")));
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
             this.thoátToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(302, 34);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(297, 34);
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
@@ -226,14 +216,13 @@
         private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hướngDẫnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngNhậpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem HeThong_MatKhau;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngKêSảnPhẩmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem danhMụcToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sảnPhẩmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhânViênToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kháchHàngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quênMậtKhẩuStripMenuItem;
         private System.Windows.Forms.Label lbl_emailNv;
     }
 }

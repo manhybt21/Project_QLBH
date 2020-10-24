@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BUS.dll" size="6144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BUS.dll" size="6656">
       <assemblyIdentity name="BUS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>X6n0LCCuDQfvVZ7ewegj34irP956aJzZGe/n1UOB2RI=</dsig:DigestValue>
+        <dsig:DigestValue>0H6niWThc+GaQNPl0QYRNfQkrs+5ZCIM1n2p9jNg1UE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Chfq9wPV9sgkj1zQ6KbADOZ3Bt682OmSvoQYopDU7sc=</dsig:DigestValue>
+        <dsig:DigestValue>0N8bUH+P5y8QlVRRUwewshM7wmrQH+hsG3mZNLBhNf8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,19 +74,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Ho6ddwFkq6Xp5EdUbpeh97HAiTBr+0O7iUCFkAqVmTE=</dsig:DigestValue>
+        <dsig:DigestValue>0+jk0gsgkMjGJ78j5fxWQiyAe5jtxf2GOIAVDcCz2+c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DuAnMau.exe" size="280544">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DuAnMau.exe" size="283104">
       <assemblyIdentity name="DuAnMau" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/llnNyokgFuN03zRkLSac/NwKJgg2W++gFMNJ2NPiw0=</dsig:DigestValue>
+        <dsig:DigestValue>IdQb0c4w13Gd7j1e0RrGAr8btqsdyMR3LUKVOztiPDE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -114,7 +114,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>K9C8NIQcQL+T2g7rE/LwlFy09hn0QTPzRLJU93AyBWU=</dsig:DigestValue>
+      <dsig:DigestValue>re8zJVyccl7Pa/ZVdLnQWJV0ChlEtWcAjlVeld54eXc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="QLBanHang_log.ldf" size="8388608" writeableType="applicationData">
@@ -123,7 +123,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>xsgHB8m6EbFjmFvg7mZ9WkJ4o/tdWAXQ4/7CWRyFIpE=</dsig:DigestValue>
+      <dsig:DigestValue>3U8bv1VNxyIpx4xjorZZ6iidCXLhlMtV3aYTMaaKugQ=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
