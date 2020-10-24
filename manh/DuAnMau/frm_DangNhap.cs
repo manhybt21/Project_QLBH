@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
@@ -51,7 +52,7 @@ namespace DuAnMau
                 Msg.From = new MailAddress("manhluong284@gmail.com");
                 Msg.To.Add(email);
                 Msg.Subject = "bạn đã sử dụng chức năng quên mật khẩu";
-                Msg.Body = "Chào Anh/Chị Mật Khẩu Mới Là " +matKhau+ " Mời Anh/Chị Đăng Nhập Lại" ;
+                Msg.Body = "Chào Anh/Chị Mật Khẩu Mới Là " + matKhau + " Mời Anh/Chị Đăng Nhập Lại";
                 client.Credentials = cred;
                 client.EnableSsl = true;
                 client.Send(Msg);
@@ -64,11 +65,26 @@ namespace DuAnMau
             }
         }
 
-        private void btn_DangNhap_Click(object sender, EventArgs e)
+        public void btn_DangNhap_Click(object sender, EventArgs e)
         {
+            if (txt_EmailDangNhap.Text == "" || txt_MatKhauDangNhap.Text == "")
+            {
+                MessageBox.Show("Email đăng nhập và Password không được để trống!");
+                return;
+            }
+                if (!KiemTraEmail(txt_EmailDangNhap.Text))
+            {
+                MessageBox.Show("Email không đúng định dạng!");
+                return;
+            }
+            if (txt_MatKhauDangNhap.Text.Length < 6)
+            {
+                MessageBox.Show("Mật khẩu phải dài hơn hoặc bằng 6 kỹ tự!");
+                return;
+            }
             DTO_NHANVIEN nv = new DTO_NHANVIEN();
-            nv.Email = txt_EmailDangNhap.Text;
-            nv.matKhau = bus_NHANVIEN.encryption(txt_MatKhauDangNhap.Text);
+            nv.Email = txt_EmailDangNhap.Text.ToLower();
+            nv.matKhau = txt_MatKhauDangNhap.Text.ToLower();
             if (BUS_NHANVIEN.DangNhap(nv))
             {
                 string mail = nv.Email;
@@ -81,12 +97,24 @@ namespace DuAnMau
             }
             else
             {
-                MessageBox.Show("Login Fall, Email or PassWord Wrong!");
+                MessageBox.Show("Login Fail, Email or PassWord Wrong!");
                 txt_EmailDangNhap.Text = null;
                 txt_MatKhauDangNhap.Text = null;
                 txt_EmailDangNhap.Focus();
             }
-            
+
+        }
+        private bool KiemTraEmail(string email)
+        {
+            email = email ?? string.Empty;
+            string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
+                  @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
+                  @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(email))
+                return true;
+            else
+                return false;
         }
 
         private void btn_quenMatKhau_Click(object sender, EventArgs e)
@@ -100,7 +128,7 @@ namespace DuAnMau
                     builder.Append(RandomNumber(1000, 9990));
                     builder.Append(RandomString(2, false));
                     MessageBox.Show(builder.ToString());
-                    string matkhaumoi = bus_NHANVIEN.encryption(builder.ToString());
+                    string matkhaumoi = BUS_NHANVIEN.encryption(builder.ToString());
                     BUS_NHANVIEN.TaoMatKhauMoi(txt_EmailDangNhap.Text, matkhaumoi);
                     SendMail(txt_EmailDangNhap.Text, matkhaumoi);
                 }
