@@ -116,20 +116,6 @@ namespace DuAnMau
             //    MessageBox.Show("The file not found in the specified location");
             //}
         }
-
-        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            dmk = new frm_DoiMatKhau();
-            if (!CheckExitsFrom("frm_DoiMatKhau"))
-            {
-                dmk.MdiParent = this;
-                dmk.Show();
-            }
-            else
-            {
-                ActiveChildFrom("frm_DoiMatKhau");
-            }
-        }
         private void thốngKêSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tk = new frm_ThongKe();
@@ -150,7 +136,11 @@ namespace DuAnMau
             Home_Load(sender, e);
             if (cache.session==1)
             {
-                quênMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
+                HeThong_MatKhau.Text = "Đổi mật khẩu";
+            }
+            else
+            {
+                HeThong_MatKhau.Text = "Quên mật khẩu";
             }
         }
         private void Home_Load(object sender, EventArgs e)
@@ -216,18 +206,35 @@ namespace DuAnMau
                 Application.Exit();
         }
 
-        private void quênMậtKhẩuStripMenuItem_Click(object sender, EventArgs e)
+        private void HeThong_MatKhauClick(object sender, EventArgs e)
         {
-            if (!CheckExitsFrom("frm_quenMatKhau"))
+            if (cache.session == 1)
             {
-                frm_quenMatKhau qmk = new frm_quenMatKhau();
-                qmk.MdiParent = this;
-                qmk.Show();
+                if (!CheckExitsFrom("frm_DoiMatKhau"))
+                {
+                    frm_DoiMatKhau dmk = new frm_DoiMatKhau();
+                    dmk.MdiParent = this;
+                    dmk.Show();
+                }
+                else
+                {
+                    ActiveChildFrom("frm_quenMatKhau");
+                }
             }
             else
             {
-                ActiveChildFrom("frm_quenMatKhau");
+                if (!CheckExitsFrom("frm_quenMatKhau"))
+                {
+                    frm_quenMatKhau qmk = new frm_quenMatKhau();
+                    qmk.MdiParent = this;
+                    qmk.Show();
+                }
+                else
+                {
+                    ActiveChildFrom("frm_quenMatKhau");
+                }
             }
+            
         }
     }
 }
