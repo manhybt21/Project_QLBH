@@ -17,6 +17,7 @@ namespace DuAnMau
         public Home()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
         }
         #region khai bao form
         frm_DangNhap dn;
@@ -81,6 +82,7 @@ namespace DuAnMau
             if (cache.session == 1)
             {
                 lbl_emailNv.Text = "Chào " + cache.mail;
+                lbl_homeText.Visible = false;
                 danhMụcToolStripMenuItem.Visible = true;
                 thoátToolStripMenuItem.Enabled = true;//enable = true hien
                 danhMụcToolStripMenuItem.Enabled = true;
@@ -115,7 +117,7 @@ namespace DuAnMau
             //}
         }
 
-        private void quênMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             dmk = new frm_DoiMatKhau();
             if (!CheckExitsFrom("frm_DoiMatKhau"))
@@ -159,6 +161,7 @@ namespace DuAnMau
                 lbl_emailNv.Text = null;
                 cache.profile = 0;
             }
+            WindowState = FormWindowState.Maximized;
         }
 
 
@@ -168,6 +171,7 @@ namespace DuAnMau
             if (!CheckExitsFrom("frm_SanPham"))
             {
                 sp.MdiParent = this;
+                sp.WindowState = FormWindowState.Maximized;
                 sp.Show();
             }
             else
@@ -182,6 +186,7 @@ namespace DuAnMau
             if (!CheckExitsFrom("frm_NhanVien"))
             {
                 nv.MdiParent = this;
+                nv.WindowState = FormWindowState.Maximized;
                 nv.Show();
             }
             else
@@ -196,6 +201,7 @@ namespace DuAnMau
             if (!CheckExitsFrom("frm_KhachHang"))
             {
                 kh.MdiParent = this;
+                kh.WindowState = FormWindowState.Maximized;
                 kh.Show();
             }
             else
@@ -210,11 +216,17 @@ namespace DuAnMau
                 Application.Exit();
         }
 
-        private void proFileToolStripMenuItem_Click(object sender, EventArgs e)
+        private void quênMậtKhẩuStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!CheckExitsFrom("frm_DoiMatKhau"))
+            if (!CheckExitsFrom("frm_quenMatKhau"))
             {
-                //    frm_DoiMatKhau profileNv = new frm_DoiMatKhau(dn.email);
+                frm_quenMatKhau qmk = new frm_quenMatKhau();
+                qmk.MdiParent = this;
+                qmk.Show();
+            }
+            else
+            {
+                ActiveChildFrom("frm_quenMatKhau");
             }
         }
     }

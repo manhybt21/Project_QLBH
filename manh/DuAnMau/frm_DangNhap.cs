@@ -46,8 +46,8 @@ namespace DuAnMau
         {
             try
             {
-                SmtpClient client = new SmtpClient("smtp.gmail.com", 587);//mail hệ thống
-                NetworkCredential cred = new NetworkCredential("manhluong284@gmail.com", "manhyb112");
+                SmtpClient client = new SmtpClient("smtp.gmail.com",587);//mail hệ thống
+                NetworkCredential cred = new NetworkCredential("manhluong284@gmail.com", "manh110701");
                 MailMessage Msg = new MailMessage();
                 Msg.From = new MailAddress("manhluong284@gmail.com");
                 Msg.To.Add(email);

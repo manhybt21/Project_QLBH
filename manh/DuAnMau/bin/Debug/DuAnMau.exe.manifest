@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BUS.dll" size="6656">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BUS.dll" size="6144">
       <assemblyIdentity name="BUS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0H6niWThc+GaQNPl0QYRNfQkrs+5ZCIM1n2p9jNg1UE=</dsig:DigestValue>
+        <dsig:DigestValue>X6n0LCCuDQfvVZ7ewegj34irP956aJzZGe/n1UOB2RI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+0uXDVyjrNVScBwTvnAafj1zHhsEkl5OeN1q5IF8tTk=</dsig:DigestValue>
+        <dsig:DigestValue>Chfq9wPV9sgkj1zQ6KbADOZ3Bt682OmSvoQYopDU7sc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,29 +74,29 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0+jk0gsgkMjGJ78j5fxWQiyAe5jtxf2GOIAVDcCz2+c=</dsig:DigestValue>
+        <dsig:DigestValue>Ho6ddwFkq6Xp5EdUbpeh97HAiTBr+0O7iUCFkAqVmTE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DuAnMau.exe" size="225760">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DuAnMau.exe" size="280544">
       <assemblyIdentity name="DuAnMau" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZMkKD8RtL2WcN+Vs9QiGy4hWhlN2Lpj26kWUlu37gwI=</dsig:DigestValue>
+        <dsig:DigestValue>/llnNyokgFuN03zRkLSac/NwKJgg2W++gFMNJ2NPiw0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="DuAnMau.exe.config" size="385">
+  <file name="DuAnMau.exe.config" size="402">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>OHceVYAgKfJGG1dxo9G/VSvIHy9cc+EhsTuDo44R7O0=</dsig:DigestValue>
+      <dsig:DigestValue>Z+mM8InVNNo8SxdaykMo0d7UhLpPtu+3Hb91Gqi1Ye4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="icon app.ico" size="117713">
@@ -114,7 +114,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>KzfZj+FqMUqq7DQCXX8maCmuOiGgOr4wSaYWTQqcvyk=</dsig:DigestValue>
+      <dsig:DigestValue>K9C8NIQcQL+T2g7rE/LwlFy09hn0QTPzRLJU93AyBWU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="QLBanHang_log.ldf" size="8388608" writeableType="applicationData">
@@ -123,7 +123,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ZlwGj5bYA/+NGBNQr0cBf1RdcXqUnlK47Lkf5uNEtwA=</dsig:DigestValue>
+      <dsig:DigestValue>xsgHB8m6EbFjmFvg7mZ9WkJ4o/tdWAXQ4/7CWRyFIpE=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

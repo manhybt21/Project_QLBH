@@ -1,64 +1,33 @@
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\bin\Debug\QLBanHang.mdf
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\bin\Debug\QLBanHang_log.ldf
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\bin\Debug\DuAnMau.exe.config
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\bin\Debug\DuAnMau.exe.manifest
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\bin\Debug\DuAnMau.application
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\bin\Debug\DuAnMau.exe
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\bin\Debug\DuAnMau.pdb
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\bin\Debug\BUS.dll
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\bin\Debug\DTO.dll
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\bin\Debug\DAL.dll
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\bin\Debug\BUS.pdb
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\bin\Debug\DTO.pdb
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\bin\Debug\DAL.pdb
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\GUI.csprojAssemblyReference.cache
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_DangNhap.resources
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_DoiMatKhau.resources
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_KhachHang.resources
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_NhanVien.resources
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_SanPham.resources
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_SanPhamNhap.resources
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_ThongKe.resources
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_TonKho.resources
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.Home.resources
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.Properties.Resources.resources
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\GUI.csproj.GenerateResource.cache
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\GUI.csproj.CoreCompileInputs.cache
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.TrustInfo.xml
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.exe.manifest
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.application
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\GUI.csproj.CopyComplete
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.exe
-C:\Users\hongh\Documents\GitHub\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.pdb
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\bin\Debug\QLBanHang.mdf
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\bin\Debug\QLBanHang_log.ldf
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\bin\Debug\DuAnMau.exe.config
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\bin\Debug\DuAnMau.exe.manifest
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\bin\Debug\DuAnMau.application
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\bin\Debug\DuAnMau.exe
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\bin\Debug\DuAnMau.pdb
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\bin\Debug\BUS.dll
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\bin\Debug\DTO.dll
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\bin\Debug\DAL.dll
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\bin\Debug\BUS.pdb
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\bin\Debug\DTO.pdb
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\bin\Debug\DAL.pdb
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\GUI.csprojAssemblyReference.cache
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_DangNhap.resources
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_DoiMatKhau.resources
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_KhachHang.resources
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_NhanVien.resources
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_SanPham.resources
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_SanPhamNhap.resources
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_ThongKe.resources
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_TonKho.resources
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.Home.resources
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.Properties.Resources.resources
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\GUI.csproj.GenerateResource.cache
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\GUI.csproj.CoreCompileInputs.cache
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.TrustInfo.xml
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.exe.manifest
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.application
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\GUI.csproj.CopyComplete
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.exe
-C:\Users\hongh\Source\Repos\manhybt21\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.pdb
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\bin\Debug\QLBanHang.mdf
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\bin\Debug\QLBanHang_log.ldf
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\bin\Debug\DuAnMau.exe.config
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\bin\Debug\DuAnMau.exe.manifest
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\bin\Debug\DuAnMau.application
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\bin\Debug\DuAnMau.exe
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\bin\Debug\DuAnMau.pdb
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\bin\Debug\BUS.dll
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\bin\Debug\DTO.dll
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\bin\Debug\DAL.dll
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\bin\Debug\BUS.pdb
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\bin\Debug\DTO.pdb
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\bin\Debug\DAL.pdb
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_DangNhap.resources
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_DoiMatKhau.resources
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_KhachHang.resources
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_NhanVien.resources
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_SanPham.resources
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_SanPhamNhap.resources
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_ThongKe.resources
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_TonKho.resources
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.Home.resources
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.Properties.Resources.resources
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.TrustInfo.xml
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.exe.manifest
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.application
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.exe
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.pdb
+C:\Users\luong\OneDrive\Máy tính\Project_QLBH\manh\DuAnMau\obj\Debug\DuAnMau.frm_quenMatKhau.resources

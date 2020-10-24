@@ -63,7 +63,7 @@
             this.btn_dong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_dong.Location = new System.Drawing.Point(876, 545);
             this.btn_dong.Name = "btn_dong";
-            this.btn_dong.Size = new System.Drawing.Size(104, 49);
+            this.btn_dong.Size = new System.Drawing.Size(109, 49);
             this.btn_dong.TabIndex = 55;
             this.btn_dong.Text = "Đóng";
             this.btn_dong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -87,9 +87,9 @@
             // 
             this.btn_boQua.Image = ((System.Drawing.Image)(resources.GetObject("btn_boQua.Image")));
             this.btn_boQua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_boQua.Location = new System.Drawing.Point(575, 545);
+            this.btn_boQua.Location = new System.Drawing.Point(571, 545);
             this.btn_boQua.Name = "btn_boQua";
-            this.btn_boQua.Size = new System.Drawing.Size(112, 49);
+            this.btn_boQua.Size = new System.Drawing.Size(116, 49);
             this.btn_boQua.TabIndex = 53;
             this.btn_boQua.Text = "Bỏ Qua";
             this.btn_boQua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -102,7 +102,7 @@
             this.btn_luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_luu.Location = new System.Drawing.Point(440, 545);
             this.btn_luu.Name = "btn_luu";
-            this.btn_luu.Size = new System.Drawing.Size(90, 49);
+            this.btn_luu.Size = new System.Drawing.Size(95, 49);
             this.btn_luu.TabIndex = 52;
             this.btn_luu.Text = "Lưu";
             this.btn_luu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -113,9 +113,9 @@
             // 
             this.btn_sua.Image = ((System.Drawing.Image)(resources.GetObject("btn_sua.Image")));
             this.btn_sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sua.Location = new System.Drawing.Point(324, 545);
+            this.btn_sua.Location = new System.Drawing.Point(314, 545);
             this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(88, 49);
+            this.btn_sua.Size = new System.Drawing.Size(98, 49);
             this.btn_sua.TabIndex = 51;
             this.btn_sua.Text = "Sửa";
             this.btn_sua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -126,9 +126,9 @@
             // 
             this.btn_xoa.Image = ((System.Drawing.Image)(resources.GetObject("btn_xoa.Image")));
             this.btn_xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_xoa.Location = new System.Drawing.Point(185, 545);
+            this.btn_xoa.Location = new System.Drawing.Point(179, 545);
             this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(93, 49);
+            this.btn_xoa.Size = new System.Drawing.Size(99, 49);
             this.btn_xoa.TabIndex = 50;
             this.btn_xoa.Text = "Xoá";
             this.btn_xoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -139,9 +139,9 @@
             // 
             this.btn_them.Image = ((System.Drawing.Image)(resources.GetObject("btn_them.Image")));
             this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_them.Location = new System.Drawing.Point(59, 545);
+            this.btn_them.Location = new System.Drawing.Point(46, 545);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(92, 49);
+            this.btn_them.Size = new System.Drawing.Size(105, 49);
             this.btn_them.TabIndex = 49;
             this.btn_them.Text = "Thêm";
             this.btn_them.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -150,12 +150,13 @@
             // 
             // btn_timKiem
             // 
+            this.btn_timKiem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_timKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_timKiem.Image = ((System.Drawing.Image)(resources.GetObject("btn_timKiem.Image")));
             this.btn_timKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_timKiem.Location = new System.Drawing.Point(603, 467);
+            this.btn_timKiem.Location = new System.Drawing.Point(602, 463);
             this.btn_timKiem.Name = "btn_timKiem";
-            this.btn_timKiem.Size = new System.Drawing.Size(139, 42);
+            this.btn_timKiem.Size = new System.Drawing.Size(169, 49);
             this.btn_timKiem.TabIndex = 48;
             this.btn_timKiem.Text = "Tìm Kiếm";
             this.btn_timKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
