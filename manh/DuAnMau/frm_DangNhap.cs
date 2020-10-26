@@ -20,6 +20,7 @@ namespace DuAnMau
         public frm_DangNhap()
         {
             InitializeComponent();
+            frm_DangNhapLoad();
         }
         BUS_NHANVIEN bus_NHANVIEN = new BUS_NHANVIEN();
         public string vaitro { get; set; }// đăng nhập thành công kiểm tra vai trò
@@ -67,42 +68,61 @@ namespace DuAnMau
 
         public void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            if (txt_EmailDangNhap.Text == "" || txt_MatKhauDangNhap.Text == "")
+            try
             {
-                MessageBox.Show("Email đăng nhập và Password không được để trống!");
-                return;
-            }
+                if (txt_EmailDangNhap.Text == "" || txt_MatKhauDangNhap.Text == "")
+                {
+                    MessageBox.Show("Email đăng nhập và Password không được để trống!");
+                    return;
+                }
                 if (!KiemTraEmail(txt_EmailDangNhap.Text))
-            {
-                MessageBox.Show("Email không đúng định dạng!");
-                return;
+                {
+                    MessageBox.Show("Email không đúng định dạng!");
+                    return;
+                }
+                if (txt_MatKhauDangNhap.Text.Length < 6)
+                {
+                    MessageBox.Show("Mật khẩu phải dài hơn hoặc bằng 6 kỹ tự!");
+                    return;
+                }
+                DTO_NHANVIEN nv = new DTO_NHANVIEN();
+                nv.Email = txt_EmailDangNhap.Text.ToLower();
+                nv.matKhau = txt_MatKhauDangNhap.Text.ToLower();
+                if (BUS_NHANVIEN.DangNhap(nv))
+                {
+                    string mail = nv.Email;
+                    cache.mail = mail;// truyền mail đăng nhập cho Home
+                    DataTable dt = BUS_NHANVIEN.LayVaiTroNV(nv.Email);
+                    vaitro = dt.Rows[0][0].ToString();// lấy vai trò nhân viên
+                    MessageBox.Show("Login Successfully");
+                    cache.session = 1;// đăng nhập thành công
+                    if (cbx_ghiNhoDangNhap.Checked)
+                    {
+                        Properties.Settings.Default.user = txt_EmailDangNhap.Text;
+                        Properties.Settings.Default.pass = txt_MatKhauDangNhap.Text;
+                        Properties.Settings.Default.Save();
+                    }
+                    else
+                    {
+                        Properties.Settings.Default.user = "";
+                        Properties.Settings.Default.pass = "";
+                        Properties.Settings.Default.isChecked = false;
+                        Properties.Settings.Default.Save();
+                    }
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Login Fail, Email or PassWord Wrong!");
+                    txt_EmailDangNhap.Text = null;
+                    txt_MatKhauDangNhap.Text = null;
+                    txt_EmailDangNhap.Focus();
+                }
             }
-            if (txt_MatKhauDangNhap.Text.Length < 6)
+            catch(Exception ex)
             {
-                MessageBox.Show("Mật khẩu phải dài hơn hoặc bằng 6 kỹ tự!");
-                return;
+                MessageBox.Show(ex.Message);
             }
-            DTO_NHANVIEN nv = new DTO_NHANVIEN();
-            nv.Email = txt_EmailDangNhap.Text.ToLower();
-            nv.matKhau = txt_MatKhauDangNhap.Text.ToLower();
-            if (BUS_NHANVIEN.DangNhap(nv))
-            {
-                string mail = nv.Email;
-                cache.mail = mail;// truyền mail đăng nhập cho Home
-                DataTable dt = BUS_NHANVIEN.LayVaiTroNV(nv.Email);
-                vaitro = dt.Rows[0][0].ToString();// lấy vai trò nhân viên
-                MessageBox.Show("Login Successfully");
-                cache.session = 1;// đăng nhập thành công
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Login Fail, Email or PassWord Wrong!");
-                txt_EmailDangNhap.Text = null;
-                txt_MatKhauDangNhap.Text = null;
-                txt_EmailDangNhap.Focus();
-            }
-
         }
         private bool KiemTraEmail(string email)
         {
@@ -146,12 +166,21 @@ namespace DuAnMau
 
         private void frm_DangNhap_Load(object sender, EventArgs e)
         {
-            cache.session = 0;
+            frm_DangNhapLoad();
         }
 
         private void btn_thoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frm_DangNhapLoad()
+        {
+            if (Properties.Settings.Default.user != string.Empty)
+            {
+                txt_EmailDangNhap.Text = Properties.Settings.Default.user;
+                txt_MatKhauDangNhap.Text = Properties.Settings.Default.pass;
+            }
         }
     }
 }

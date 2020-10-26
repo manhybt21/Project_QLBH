@@ -91,6 +91,7 @@ namespace DuAnMau
                 kháchHàngToolStripMenuItem.Enabled = true;
                 nhânViênToolStripMenuItem.Enabled = true;
                 thốngKêToolStripMenuItem.Enabled = true;
+                daToolStripMenuItem.Enabled = true;
                 if (int.Parse(dn.vaitro) == 0)
                 {
                     VaiTroNV();
@@ -100,9 +101,10 @@ namespace DuAnMau
             {
                 nhânViênToolStripMenuItem.Visible = false;
                 danhMụcToolStripMenuItem.Enabled = false;
-                thoátToolStripMenuItem.Enabled = false;
+                thoátToolStripMenuItem.Enabled = true;
                 thốngKêToolStripMenuItem.Enabled = false;
                 đăngNhậpToolStripMenuItem.Enabled = true;
+                daToolStripMenuItem.Enabled = false;
             }
         }
         private void hướngDẫnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -122,6 +124,7 @@ namespace DuAnMau
             if (!CheckExitsFrom("frm_ThongKe"))
             {
                 tk.MdiParent = this.MdiParent;
+                tk.WindowState = FormWindowState.Maximized;
                 tk.ShowDialog();
             }
             else
@@ -146,12 +149,6 @@ namespace DuAnMau
         private void Home_Load(object sender, EventArgs e)
         {
             resetValue();
-            if (cache.profile == 1)
-            {
-                lbl_emailNv.Text = null;
-                cache.profile = 0;
-            }
-            WindowState = FormWindowState.Maximized;
         }
 
 
@@ -235,6 +232,13 @@ namespace DuAnMau
                 }
             }
             
+        }
+        private void daToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cache.session = 0;
+            lbl_emailNv.Text = null;
+            resetValue();
+            đăngNhậpToolStripMenuItem.Enabled = true;
         }
     }
 }
