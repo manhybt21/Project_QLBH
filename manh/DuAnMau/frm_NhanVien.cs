@@ -38,7 +38,7 @@ namespace DuAnMau
                 //tài khoản nhận mail
                 Msg.To.Add(new MailAddress(email));
                 Msg.Subject = "Chào Mừng Thành Viên Mới";
-                Msg.Body = "Chào anh/chị. Mật khẩu  của bạn là: 123456, Bạn có thể đăng nhập vào ứng dụng bằng mật khẩu mới. Cảm ơn!! ";
+                Msg.Body = "Chào anh/chị. Mật khẩu  của bạn là: 123456, Bạn có thể đăng nhập vào ứng dụng. Cảm ơn!! ";
                 //quan trọng
                 client.Credentials = network;
                 client.Send(Msg);
@@ -113,10 +113,21 @@ namespace DuAnMau
                 return false;
             }
         }
+        DataClasseDataContext db = new DataClasseDataContext();
         private void btn_luu_Click(object sender, EventArgs e)
         {
             try
             {
+                var ktraEmail = from n in db.NHANVIENs
+                                select n.Email;
+                foreach (var item in ktraEmail)
+                {
+                    if(txt_emailNhanVien.Text== item)
+                    {
+                        MessageBox.Show("Email đã tồn tại vui lòng thử lại ");
+                        return;
+                    }
+                }
                 int Role = 0;//role = 0 là nhân viên
                 if (rad_quanTri.Checked)
                 {

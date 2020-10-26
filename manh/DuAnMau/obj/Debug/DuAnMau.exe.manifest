@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0H6niWThc+GaQNPl0QYRNfQkrs+5ZCIM1n2p9jNg1UE=</dsig:DigestValue>
+        <dsig:DigestValue>lMaRSJE/BIXL6+7XCvWIyCXrqw0VqRRGupt7aCcDccM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0N8bUH+P5y8QlVRRUwewshM7wmrQH+hsG3mZNLBhNf8=</dsig:DigestValue>
+        <dsig:DigestValue>CzQORZSDVGNyPzkScgJMrOxMJ5qHXTaa4r3TZNb9VWI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -79,24 +79,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DuAnMau.exe" size="283104">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DuAnMau.exe" size="296416">
       <assemblyIdentity name="DuAnMau" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IdQb0c4w13Gd7j1e0RrGAr8btqsdyMR3LUKVOztiPDE=</dsig:DigestValue>
+        <dsig:DigestValue>ndWMx5PhFwL82vsh8Jiy4fgAEzT0wewgybAoCYCdBks=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="DuAnMau.exe.config" size="402">
+  <file name="DuAnMau.exe.config" size="1515">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Z+mM8InVNNo8SxdaykMo0d7UhLpPtu+3Hb91Gqi1Ye4=</dsig:DigestValue>
+      <dsig:DigestValue>Z10h18/+7tiUNX0fMqgdhVRG5Hze8xzwq30lFO1miwA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="icon app.ico" size="117713">
@@ -114,7 +114,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>re8zJVyccl7Pa/ZVdLnQWJV0ChlEtWcAjlVeld54eXc=</dsig:DigestValue>
+      <dsig:DigestValue>jfuDw4zjDftDLlgttEDd0mDSLu/AnNkd+S/e4Kuq+Oo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="QLBanHang_log.ldf" size="8388608" writeableType="applicationData">
@@ -123,7 +123,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>3U8bv1VNxyIpx4xjorZZ6iidCXLhlMtV3aYTMaaKugQ=</dsig:DigestValue>
+      <dsig:DigestValue>AEhm2TqPXWSmDVUMe69cNxh2f4viscM8OhkQfcWrxzM=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

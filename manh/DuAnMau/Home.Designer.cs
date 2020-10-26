@@ -35,6 +35,7 @@
             this.đăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HeThong_MatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.daToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +53,7 @@
             this.lbl_homeText.BackColor = System.Drawing.Color.Transparent;
             this.lbl_homeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_homeText.ForeColor = System.Drawing.Color.Blue;
-            this.lbl_homeText.Location = new System.Drawing.Point(178, 46);
+            this.lbl_homeText.Location = new System.Drawing.Point(185, 53);
             this.lbl_homeText.Name = "lbl_homeText";
             this.lbl_homeText.Size = new System.Drawing.Size(598, 37);
             this.lbl_homeText.TabIndex = 5;
@@ -79,7 +80,8 @@
             this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.đăngNhậpToolStripMenuItem,
             this.HeThong_MatKhau,
-            this.thoátToolStripMenuItem});
+            this.thoátToolStripMenuItem,
+            this.daToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Image = global::DuAnMau.Properties.Resources.FontAwesome_f0b1_3__48;
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
             this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(130, 29);
@@ -113,6 +115,13 @@
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
+            // 
+            // daToolStripMenuItem
+            // 
+            this.daToolStripMenuItem.Name = "daToolStripMenuItem";
+            this.daToolStripMenuItem.Size = new System.Drawing.Size(297, 34);
+            this.daToolStripMenuItem.Text = "Đăng Xuất";
+            this.daToolStripMenuItem.Click += new System.EventHandler(this.daToolStripMenuItem_Click);
             // 
             // danhMụcToolStripMenuItem
             // 
@@ -224,5 +233,6 @@
         private System.Windows.Forms.ToolStripMenuItem nhânViênToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kháchHàngToolStripMenuItem;
         private System.Windows.Forms.Label lbl_emailNv;
+        private System.Windows.Forms.ToolStripMenuItem daToolStripMenuItem;
     }
 }

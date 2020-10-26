@@ -154,7 +154,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frm_DangNhap";
             this.Text = "frm_DangNhap";
-            this.Enter += new System.EventHandler(this.frm_DangNhap_Load);
+            this.Load += new System.EventHandler(this.frm_DangNhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
