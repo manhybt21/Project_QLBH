@@ -46,7 +46,6 @@ namespace DuAnMau
             if (!CheckExitsFrom("frm_SanPhamNhap"))
             {
                 spn.MdiParent = this;
-                spn.WindowState = FormWindowState.Maximized;
                 spn.Show();
             }
             else
@@ -61,7 +60,6 @@ namespace DuAnMau
             if (!CheckExitsFrom("frm_TonKho"))
             {
                 tk.MdiParent = this;
-                tk.WindowState = FormWindowState.Maximized;
                 tk.Show();
             }
             else

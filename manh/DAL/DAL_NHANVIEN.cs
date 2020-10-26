@@ -140,7 +140,7 @@ namespace DAL
         }
         public static bool InsertNhanVien(DTO_NHANVIEN nv) {
             try {
-                DBConnected.conn.Open();
+               DBConnected.conn.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Connection = DBConnected.conn;
@@ -214,5 +214,6 @@ namespace DAL
                 DBConnected.conn.Close();
             }
         }
+
     }
 }
